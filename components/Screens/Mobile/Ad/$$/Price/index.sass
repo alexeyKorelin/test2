@@ -1,0 +1,183 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+  align-items: center
+  position: relative
+  text-align: center
+  justify-content: center
+  padding-bottom: 15px
+
+  &_open
+    .current
+      &:after
+        transform: rotate(180deg)
+
+      &__coin
+        box-shadow: 0px 0px 1px rgba(183, 155, 218, 0)
+        background: transparent
+
+  &_archived
+    .value
+      color: $color--text-gray     
+
+.current
+  border-radius: 4px
+  display: inline-flex
+  align-items: center
+  padding: 0 9px
+  background: #fff
+  box-shadow: 0px 1px 6px rgba(183, 155, 218, 0.188887)
+  position: absolute
+  font-size: 18px
+  height: 30px
+  align-items: center
+  line-height: 21px  
+  
+  &__usd
+    font-size: 12px
+    color: $color--text-ultra-light-gray
+    margin-left: 10px
+    margin-top: 3px
+
+  &_more
+    padding-right: 4px
+
+    &:after
+      content: ''
+      width: 0
+      height: 0
+      border-top: 4px solid $color--text-purple
+      border-right: 3px solid transparent
+      border-bottom: 0
+      border-left: 3px solid transparent
+      margin-left: 4px
+      transition: transform .3s, border-color .3s
+
+  &__value
+    font-weight: bold
+
+  &__curr
+    font-family: $font--istok_web 
+    color: $color--text-purple
+    text-transform: uppercase
+    font-weight: bold
+    margin-left: 5px
+    margin-bottom: -2px
+
+  &__icon
+    color: $color--text-purple
+    text-align: center
+    margin-left: 4px
+    background: #fff
+    margin-left: 5px
+    margin-bottom: -1px
+    transition: all 0.3s
+
+.dropdown
+  position: fixed
+  z-index: 4
+  left: 0
+  right: 0 
+  bottom: 0
+  background: #fff
+  box-shadow: 0px -1px 10px rgba(183, 155, 218, 0.188887)
+  border-radius: 8px 8px 0 0
+  max-height: 80%
+  height: 350px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+
+.controls
+  display: flex
+  padding: 22px 15px 10px
+  flex: 0 0 64px
+  box-sizing: border-box
+
+  &__inner
+    width: 100%
+    position: relative
+
+.close, .apply
+  position: absolute
+
+.close
+  padding: 0
+  left: 0
+
+.title
+  font-size: 18px
+  line-height: 21px
+  color: $color--text-dark-gray
+  font-weight: bold
+  margin-top: 1px
+  display: inline-block
+
+.list
+  $root: &
+
+  display: flex
+  flex: 1
+  list-style: none
+  text-transform: uppercase
+  color: $color--text-dark-gray
+  overflow: auto
+
+  &__inner
+    margin: 0
+    padding: 0
+    width: 100%
+
+  &__coin
+    height: 30px
+    align-items: center
+    font-size: 18px
+    background: #fff
+    align-items: center
+    justify-content: center
+    display: flex
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    transition: all 0.3s
+
+    &:not(:last-child)
+      margin-bottom: 6px
+
+    &_active
+      background: linear-gradient(19.76deg, rgba(124, 16, 255, 0.04) 5.56%, rgba(169, 92, 255, 0.04) 100.88%)
+
+      #{$root}__value
+        font-weight: bold
+
+      #{$root}__curr
+        font-family: $font--istok_web 
+        color: $color--text-purple
+        font-weight: bold
+        margin-bottom: -2px
+
+      #{$root}__icon
+        color: $color--text-purple
+        margin-bottom: -1px
+
+  &__curr
+    margin-left: 5px
+
+  &__icon
+    margin-left: 5px 
+
+.enter
+  opacity: 0.01
+
+.enter.enterActive
+  opacity: 1
+  transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.leave
+  opacity: 1
+
+.leave.leaveActive
+  opacity: 0.01
+  transition: opacity 200ms cubic-bezier(0.23, 1, 0.32, 1)     
+  

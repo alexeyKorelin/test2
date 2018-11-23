@@ -1,0 +1,88 @@
+@import 'styles/config.sass'
+
+.root
+  font-size: 12px
+  line-height: 14px
+  text-align: center
+  display: flex
+  margin: 17px 0 13px
+  flex-direction: column
+
+.digits
+  margin-bottom: 5px
+  display: flex
+  align-items: center
+  justify-content: center
+  position: relative
+
+.link
+  color: black
+  text-decoration: none
+  position: relative
+
+.leftIcon
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+
+.backLine
+  position: absolute
+  top: 50%
+  width: 50px
+  left: 50%
+  transform: translate(-50%, -50%)
+  border-bottom: 1px dashed $color--text-gray
+  z-index: 0
+
+.text
+  font-size: 30px
+  font-weight: bolder
+  line-height: initial
+
+.a
+  color: white
+  font-size: 9px
+  line-height: 16px
+  font-family: $font--roboto
+  height: 16px
+  width: 16px
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  position: relative
+  background: $color--text-gray
+  z-index: 1
+  &:not(:last-child)
+    margin-right: 6px
+    &:after
+      content: ' '
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 20px
+      left: 100%
+      z-index: 0
+      border-bottom: 1px dashed
+      border-color: $color--text-gray
+
+  &_checked
+    background: $gradient--secondary
+    &:after
+      border-color: $color--main !important
+
+  &_active
+    font-size: 14px
+    height: 21px
+    width: 21px
+    line-height: 21px
+    background: $gradient--secondary
+
+.divider
+  color: #BEBEBE
+  margin: 0 12px
+
+@media screen and (min-width: 600px)
+  .text
+    font-size: 36px

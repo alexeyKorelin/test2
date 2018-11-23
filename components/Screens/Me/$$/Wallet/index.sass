@@ -1,0 +1,96 @@
+@import 'styles/config.sass'
+
+.root
+  box-shadow: $box-shadow
+  border-radius: $border-radius--main
+  background-image: linear-gradient(-280deg, #7C10FF 0%, #A95CFF 100%);
+  color: #fff
+  position: relative
+  padding: 22px 20px 26px 20px
+  margin-bottom: 15px
+  &_collapsed
+    padding: 20px
+  i
+    float: right
+    cursor: pointer
+
+.top
+  margin-bottom: 20px
+
+  &:after
+    display: block
+    content: ''
+    clear: both  
+
+.currency
+  font-size: 24px
+  font-weight: bold
+  color: #fff
+  &_add
+    font-size: 18px
+    font-weight: bold
+    color: #fff
+    margin: 0
+    display: inline-block
+
+.actions
+  position: absolute
+  top: 26px
+  right: 20px
+  .link
+    color: #fff
+    cursor: pointer
+    text-decoration: underline 
+    font-size: 12px
+    padding: 0
+    margin-left: 10px
+
+.code
+  font-size: 12px
+  margin-bottom: 18px
+
+.total
+  font-size: 12px
+  font-weight: bold
+
+.dropdown
+  position: absolute
+  right: 17.5px
+  top: 17.5px
+
+.title
+  font-family: $font--istok_web
+  font-size: 12px
+  opacity: 0.62
+  margin-bottom: 10px
+  &_editing
+    margin-bottom: 5px
+
+.input
+  border: 1px solid #E1E8EE
+  border-radius: 2px
+  font-family: $font--istok_web
+  font-size: 12px
+  color: #fff
+  background: transparent
+  width: 275px
+  padding: 3px 5px
+  margin-bottom: 12px
+  margin-left: -5px
+  &_error
+    border-color: #FF6578
+    margin-bottom: 4px
+  @media screen and (max-width: 374px)
+    width: 210px
+
+.count
+  font-family: $font--istok_web
+  font-size: 10px
+  margin-left: 6px
+  opacity: 0.8
+
+.error
+  font-family: $font--istok_web
+  font-size: 10px
+  color: #FF6578
+  margin-bottom: 6px

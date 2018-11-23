@@ -1,0 +1,48 @@
+@import 'styles/config.sass'
+
+.root
+  display: block
+  position: relative
+  padding-left: 28px
+  cursor: pointer
+  font-size: 14px
+  line-height: 21px
+  min-height: 20px
+  user-select: none
+  padding-top: 1px
+
+  &:hover .input + .label
+    border-color: $color--text-purple
+
+.input
+  position: absolute
+  opacity: 0
+
+  &:checked + .label
+    background: $color--text-purple
+
+    &:after
+      display: block
+
+.label
+  position: absolute
+  top: 0
+  left: 0
+  height: 18px
+  width: 18px
+  border-radius: 50%
+  border: 1px solid #DFE6EE
+  box-sizing: border-box
+  transition: all 0.3s
+
+  &:after
+    content: ''
+    position: absolute
+    display: none
+    top: 4px
+    left: 4px
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: #fff
+    box-shadow: 0 1px 4px rgba(144, 164, 183, 0.2) 

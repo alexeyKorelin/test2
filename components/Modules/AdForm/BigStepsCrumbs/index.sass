@@ -1,0 +1,99 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+  justify-content: center
+  margin-left: auto
+  margin-right: auto
+
+.point
+  display: flex
+
+  .title
+    color: $color--text-gray
+    text-decoration: none
+
+  &_closed
+    .closedIcon
+      max-width: 9999px
+      max-height: 9999px 
+      opacity: 1
+      transition: opacity 0.3s
+
+    .icon 
+      background-image: $gradient--main
+      &:hover
+        cursor: pointer
+
+    .number
+      display: none
+
+  &_active
+    .icon
+      font-size: 18px
+      background-image: $gradient--main
+
+    .title
+      color: $color--main
+
+  &_emptyDesc
+    .right
+      margin-top: 11px    
+
+.left
+  margin-top: 9px
+
+.iconContainer
+  width: 42px
+  height: 42px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.icon
+  background: #BEBEBE
+  display: block
+  border-radius: 50%
+  width: 40px
+  height: 40px  
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #fff
+  font-size: 12px
+  font-weight: bold
+  transition: width 0.3s, background-color 0.3s, border-color 0.3s, font-size 0.3s
+  border: 1px solid transparent
+
+.closedIcon
+  max-width: 0
+  max-height: 0
+  overflow: hidden
+  opacity: 0
+  transition: opacity 0.3s, max-width 0s 0.3s, max-height 0s 0.3s
+
+.number 
+  overflow: hidden  
+
+.right
+  padding-left: 14px
+  transition: margin-top 0.3s
+
+.title
+  font-weight: bold
+  font-size: 24px
+  line-height: 28px
+  transition: color 0.3s
+
+.description
+  margin-top: 7px
+  color: $color--text-gray
+  text-decoration: underline
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  font-size: 12px
+  max-width: 150px
+
+.divider
+  margin: 15px 18px 0 20px  

@@ -1,0 +1,44 @@
+@import 'styles/config.sass'
+
+.tabControls
+  text-align: center
+  margin-bottom: 44px
+
+.tabControl
+  color: $color--text-gray
+  font-size: 18px
+  line-height: 21px
+  padding: 4px 0 8px
+  border: none
+  background: #fff
+  border-radius: 4px
+  box-shadow: 0px 1px 7px rgba(210, 204, 255, 0.3)
+  cursor: pointer
+  text-align: center
+  transition: all 0.3s
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  &:hover
+    color: $color--text-blue
+    font-weight: bold
+
+  &_active 
+    color: $color--text-blue
+    background: transparent
+    box-shadow: 0px 1px 7px rgba(210, 204, 255, 0)
+    font-weight: bold
+
+.tab
+  overflow: hidden
+  max-width: 0
+  max-height: 0
+  opacity: 0
+  transition: all 0s
+
+  &_active
+    max-width: 9999px
+    max-height: 9999px
+    opacity: 1
+    transition: opacity 1.5s 0.1s

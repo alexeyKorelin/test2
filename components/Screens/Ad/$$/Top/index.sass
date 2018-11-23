@@ -1,0 +1,92 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+  color: $color--text-gray
+
+  &_archived
+    .categoryBage
+      background: $color--text-gray
+      border-color: $color--text-gray
+
+    .subcategoryBage
+      border-color: $color--text-gray
+      color: $color--text-gray
+
+.categoryBage
+  color: #fff
+
+.point
+  display: inline-flex
+  align-items: center
+
+  &__value
+    font-size: 12px
+    line-height: 14px
+
+  &__icon
+    margin-right: 5px
+
+    &_date
+      font-size: 15px
+      margin-top: -4px
+
+    &_place
+      font-size: 15px
+      margin-top: -2px
+
+    &_mark
+      background: $color--text-purple
+      border-radius: 50%
+      color: #fff
+      display: inline-block
+      width: 13px
+      height: 13px
+      line-height: 11px
+      box-sizing: border-box
+      border: 1px solid $color--text-light-gray
+      font-size: 4px
+      text-align: center
+
+  &:not(:last-child)
+    margin-right: 6px
+
+.top
+  display: flex
+  align-items: flex-start
+
+.left,
+.right
+  display: flex
+
+.right
+  margin-left: auto  
+  align-items: flex-start
+
+.bottom
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-top: 10px
+
+.category
+  text-decoration: none
+
+  &:not(:last-child)
+    margin-right: 5px
+
+.yourAd
+  color: $color--text-purple
+
+.likeButton
+  position: absolute
+  top: -3px
+  right: 0
+
+.status
+  margin-top: 2px
+  &:not(:last-child)
+    margin-right: 5px
+
+.dropdown
+  margin-top: -5px

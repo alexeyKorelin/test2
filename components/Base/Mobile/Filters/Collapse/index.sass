@@ -1,0 +1,71 @@
+@import 'styles/config.sass'
+
+.root
+  &_open
+    .title
+      &:after
+        transform: rotate(90deg)
+
+.title
+  box-sizing: border-box
+  padding: 5px 20px 5px 5px
+  margin: -5px
+  color: $color--text
+  font-size: 18px
+  line-height: 21px
+  font-weight: bold
+  position: relative
+  cursor: pointer
+  transition: all 0.3s
+  display: flex
+  align-items: center
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-top: 4px solid transparent
+    border-left: 5px solid $color--main
+    border-bottom: 4px solid transparent
+    top: 12px
+    right: 10px
+    position: absolute
+    transition: transform 0.3s, border-color 0.3s
+
+.header
+  min-height: 57px
+  padding-bottom: 10px
+  box-sizing: border-box
+  margin-bottom: 10px
+
+.h2
+  font-weight: bold
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+  margin-top: 6px
+  margin-bottom: 0
+
+.subheader
+  font-family: $font--istok_web
+  font-size: 12px
+  line-height: 14px
+  color: $color--text-gray
+  text-align: center
+
+.expanded
+  margin-top: 17px
+
+.selected
+  font-family: $font--istok_web
+  font-size: 10px
+  line-height: 14px
+  color: $color--text-gray
+  margin-top: 3px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.fullSidebar
+  width: 100% !important

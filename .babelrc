@@ -1,0 +1,34 @@
+{
+  "presets": [
+    ["next/babel", {
+      "preset-env": { "modules": false },
+      "class-properties": { "loose": true }
+    }]
+  ],
+  "compact": false,
+  "plugins": [
+    "jsx-control-statements",
+    "transform-export-extensions",
+    "@babel/plugin-proposal-export-default-from",
+    ["wrap-in-js", {
+      "extensions": ["css$", "scss$"]
+    }],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["module-resolver", {
+      "root": "./src",
+      "alias": {
+        "components": "./components",
+        "routes": "./routes",
+        "stores": "./stores",
+        "utils": "./utils",
+        "pages": "./pages",
+        "styles": "./styles",
+        "config": "./config",
+        "server": "./server"
+      }
+    }],
+    ["inline-import", { "extensions": [".css"] }],
+    ["inline-react-svg", { "svgo": { "plugins": [{ "cleanupIDs": true }]}}]
+  ],
+  "ignore": []
+}

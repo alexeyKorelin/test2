@@ -1,0 +1,49 @@
+@import 'styles/config.sass'
+
+.root
+  background: #8C31FF
+  padding: 61px 0 69px
+  position: relative
+  overflow: visible
+
+.description
+  color: #fff
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+
+.links
+  text-align: center
+  margin-top: 27px
+
+.link
+  display: inline-flex
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  background: #fff
+  justify-content: center
+  align-items: center
+  color: #8C31FF 
+  vertical-align: top
+
+  &:not(:last-child)
+    margin-right: 14px
+
+.iconColor
+  fill: #8C31FF 
+
+.bush7
+  position: absolute
+  z-index: 3
+  top: -379px
+  left: -179px   
+
+@for $i from 1 through 6  
+  @media screen and (max-width: 1830 - $i*100px) 
+    .bush7
+      left: -179px - $i*50px     
+
+@media screen and (max-width: 1200px)
+  .bush7
+    left: -422px  

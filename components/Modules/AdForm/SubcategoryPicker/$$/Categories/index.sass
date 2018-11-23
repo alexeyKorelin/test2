@@ -1,0 +1,125 @@
+@import 'styles/config.sass'
+
+.h1
+  text-align: center
+  margin-bottom: 37px
+
+.row
+  justify-content: center
+  margin-right: -2.5px
+  margin-left: -2.5px
+
+.col
+  display: flex
+  flex: 0 0 20%
+  max-width: 20%
+  height: 260px
+  padding: 0 2.5px
+  margin-bottom: 5px
+  position: relative
+  &:hover .category
+    transform: rotateY(-180deg)
+  &:hover .subcategories
+    transform: rotateY(0)
+  &_mobile
+    flex: 0 0 100%
+
+.collapse
+  background: #fff
+  box-shadow: 0 1px 7px 0 #e1e8ee
+  font-size: 18px
+  border-radius: $border-radius--main
+  overflow: hidden
+  padding: 9px 16px
+  margin-bottom: 10px
+  .title
+    display: flex
+    align-items: center
+
+.flipper
+  position: relative
+  width: 100%
+
+.category
+  background-image: linear-gradient(0deg, #7C10FF 0%, #A95CFF 100%)
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  flex-wrap: nowrap
+  margin-bottom: 5px
+  min-height: 260px
+  width: 100%
+  i
+    color: #fff
+
+.title
+  color: #fff
+  font-size: 18px
+  font-weight: bold
+  margin-top: 2px
+
+.subcategories
+  background: #fff
+  color: #4A4A4A
+  font-size: 11px
+  line-height: 17px
+  transform: rotateY(-180deg)
+  &_mobile
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+
+  &_inner
+    padding: 8px
+  &_icon
+    display: flex
+    flex-direction: column
+    text-align: center
+    color: #8016FF
+    font-size: 14px
+    font-weight: bold
+    margin-bottom: 10px
+    i
+      color: #8016FF
+      margin-top: 25px
+      margin-bottom: 22px
+
+.category, .subcategories
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 260px
+  margin: 0
+  backface-visibility: hidden
+  transition: transform 0.3s
+  border-radius: $border-radius--main
+  box-shadow: 0 0 10px 0 rgba(183,155,218,0.28)
+
+.subcategory
+  display: flex
+  padding: 0
+  margin-bottom: 2px
+  border: none
+  cursor: pointer
+  background: transparent
+  transition: all 0.3s
+  color: $color--text-dark-gray
+  font-family: $font--istok_web
+  font-size: 11px
+  text-align: left
+  &_mobile
+    display: block
+    padding: 0
+    color: #9B9B9B
+    margin-left: 52px
+    font-size: 14px
+    text-align: left
+    line-height: 16px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+  &:hover
+    color: $color--text-blue

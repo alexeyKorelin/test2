@@ -1,0 +1,57 @@
+@import 'styles/config.sass'
+
+.form
+  margin-top: 38px
+  font-family: $font--istok_web
+
+  &__top
+    background: #fff
+    border-radius: $border-radius--main
+    box-shadow: $box-shadow
+    padding: 30px 20px 39px
+    &_mobile
+      padding: 10px
+      margin: 0 -10px
+
+  &__bottom
+    display: flex
+    margin-top: 30px
+
+  .notes
+    font-size: 14px
+    line-height: 16px
+    color: $color--text-gray
+    display: flex
+    align-items: center
+
+    &__note:not(:last-child)
+      margin-bottom: 17px
+
+    &__b
+      font-weight: bold
+      color: $color--text-blue
+
+.nextButton
+  border-radius: 100px
+  margin-left: auto
+  &_mobile
+    margin-right: auto
+
+.switch_label
+  font-size: 18px
+
+.language
+  float: right
+  position: relative
+  &_mobile
+    float: none
+    display: flex
+    align-items: center
+    padding-bottom: 15px
+    color: black
+
+@media screen and (min-width: 600px)
+  .form__top_mobile
+    margin-left: 0
+    margin-right: 0
+    padding: 15px

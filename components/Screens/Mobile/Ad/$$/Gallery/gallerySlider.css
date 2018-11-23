@@ -1,0 +1,36 @@
+.gallerySliderMobile .slick-track {
+  margin: unset;
+}
+.gallerySliderMobile .slick-list {
+  overflow: hidden;
+}
+.gallerySliderMobile .slick-dots {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  height: 10px;
+  position: absolute;
+  margin-top: -22px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.gallerySliderMobile .slick-dots li {
+  display: inline-flex;
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
+  justify-content: center;
+  align-items: center
+}
+.gallerySliderMobile .slick-dots li:not(:last-child) {
+  margin-right: 5px;
+}
+.gallerySliderMobile .slick-active .page {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+}

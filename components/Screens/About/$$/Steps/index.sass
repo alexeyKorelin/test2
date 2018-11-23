@@ -1,0 +1,56 @@
+@import 'styles/config.sass'
+
+.root
+  border-radius: $border-radius
+  box-shadow: $box-shadow
+  background: #fff
+  text-align: center
+  padding: 43px 0 70px
+
+.h2
+  color: $color--text  
+  font-size: 24px
+  line-height: 28px 
+  margin-bottom: 34px 
+
+.steps
+  padding-left: 30px
+  padding-right: 30px
+
+.step
+  position: relative
+
+  &:not(:last-child)
+    &:after
+      content: url(https://cdn.mentalmarket.io/uploads/advs/about-dashed-line.svg)
+      display: block
+      position: absolute    
+      top: 68px
+      right: -64px
+
+.imageContainer
+  margin-bottom: 23px
+
+.title
+  color: $color--text
+  font-weight: bold
+  font-size: 18px
+  line-height: 21px
+
+.description
+  color: $color--text-gray
+  margin-top: 11px
+  font-size: 16px
+  line-height: 26px
+
+.auth
+  font-size: 16px
+  line-height: 26px
+  display: inline
+  padding: 0
+  margin: 0
+  text-decoration: underline
+  color: $color--text-blue  
+  border: none
+  background: transparent
+  cursor: pointer

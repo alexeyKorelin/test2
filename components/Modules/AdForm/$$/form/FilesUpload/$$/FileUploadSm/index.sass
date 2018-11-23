@@ -1,0 +1,114 @@
+@import 'styles/config.sass'
+
+.root
+  &_error
+    .filesArea
+      border: 1px solid $color--text-red
+      box-shadow: 0 0 5px rgba(88, 0, 255, 0)
+
+.info
+  margin-bottom: 5px
+
+.title
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  color: $color--text
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+  &_error
+    color: $color--text-red
+
+.selectFromPc
+  display: inline
+  padding: 0
+  text-decoration: none
+  border: none
+  border-radius: 50%
+  background: #FFFFFF
+  box-shadow: 0 0 6px 0 #E1E8EE
+  font-size: 18px
+  line-height: 28px
+  color: #7200FF
+  cursor: pointer
+  width: 56px
+  height: 56px
+
+  &_small
+    font-size: 12px
+    line-height: 19px
+    color: $color--text-blue
+
+.info
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 19px
+
+.b
+  font-weight: bold
+
+.photos
+  margin: 10px 0
+  &__col
+    display: flex
+    align-items: center
+    &:not(:last-child)
+      padding: 0 12px 0 0
+    &:last-child
+      padding: 0 12px 0 0
+
+.photo
+  position: relative
+  width: 100%
+  height: 100%
+
+  &__image
+    max-width: 100%
+    min-height: 100%
+    background-color: #E3E3E3
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    border-radius: 50%
+    display: flex
+
+  &__remove
+    border: none
+    border-radius: 50%
+    padding: 0
+    position: absolute
+    top: calc(50% - 17.5px)
+    right: calc(50% - 17.5px)
+    cursor: pointer
+    opacity: 0.71
+    background: #E1E8EE
+    width: 35px
+    height: 35px
+    svg path
+      fill: $color--text-dark-gray
+
+    &Icon
+
+.plus
+  box-shadow: 0px 1px 7px rgba(221, 227, 255, 0.45)   
+  border-radius: 50%
+  background: #fff  
+  border: none 
+  width: 100%
+  height: 100%
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  align-self: center
+  cursor: pointer
+  padding: 0
+  margin-left: -3px

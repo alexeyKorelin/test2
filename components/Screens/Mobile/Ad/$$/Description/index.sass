@@ -1,0 +1,38 @@
+@import 'styles/config.sass'
+
+.root
+  &_expanded
+    .description
+      max-height: 999px
+      transition: max-height 1s
+
+    .caret
+      transform: rotate(180deg)
+
+.desc_row
+  padding: 0
+  margin: 0
+
+.description
+  font-size: 14px
+  line-height: 16px
+  color: $color--text-gray
+  overflow: hidden
+  max-height: 48px
+  transition: max-height 0.3s
+
+.button
+  margin-top: 5px
+  font-size: 10px
+  line-height: 14px
+  color: $color--text-purple
+  cursor: pointer
+  padding: 0
+  display: flex
+  align-items: center
+
+.caret
+  font-size: 3px
+  margin-left: 6px
+  margin-bottom: -1px
+  transition: all 0.3s

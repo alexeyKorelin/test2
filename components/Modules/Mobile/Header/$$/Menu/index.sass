@@ -1,0 +1,160 @@
+@import "styles/config.sass"
+
+.root
+  width: 20px
+  height: 24px
+  display: block
+  border: none
+  background: transparent
+  padding: 0
+  outline: none
+  -webkit-appearance: none
+
+.inputContainer
+  position: relative
+
+.inputButton
+  position: absolute
+  left: 0
+  bottom: 12px
+
+.menuSidebar
+  background-image: $gradient--main
+  padding: 60px 0 10px
+  h2
+    margin-bottom: 28px
+  i
+    color: #fff
+    padding: 2px
+  nav
+    list-style-type: none
+  li
+    font-size: 24px
+    font-weight: 400
+    line-height: 61px
+    letter-spacing: 0.5px
+    color: #fff
+    margin: 0
+    text-align: center
+    a
+      color: #fff
+      text-decoration: none
+    &.create
+      margin-top: 20px
+      background-color: #fff
+      color: #7200FF
+      border-radius: 4px
+      font-size: 16px
+      font-weight: 600
+      display: block
+
+.searchSidebar
+  background-image: $gradient--main
+  i
+    color: #fff
+  h2
+    text-align: center
+    color: #fff
+    font-size: 18px
+    font-weight: bold
+    margin-top: 3px
+    letter-spacing: 1px
+  input[type="search"]
+    margin-top: 100px
+    width: 100%
+    font-size: 18px
+    font-weight: 400
+    border: none
+    border-radius: 0
+    border-bottom: 1px solid #E1E8EE
+    padding: 9px 0
+    padding-left: 24px
+    background-color: transparent
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    color: #fff
+    &::-webkit-search-decoration,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration,
+    &::-webkit-search-cancel-button
+      display: none
+    &::placeholder
+      color: #fff
+
+.inputCross
+  position: absolute
+  bottom: 12px
+  padding-left: 15px
+  right: 0
+
+.submit
+  width: 100%
+  margin-top: 38px
+  color: #fff
+  border: 2px solid #fff;
+
+.create
+  margin-top: 20px
+
+.menu_item
+  display: flex
+  align-items: center
+  width: 100%
+  margin: 12px 0
+  color: #fff
+  text-decoration: none
+  font-weight: 300
+  letter-spacing: 1px
+  position: relative
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-top: 4px solid #fff
+    border-right: 4px solid transparent
+    border-bottom: 0
+    border-left: 4px solid transparent
+    top: 20px
+    right: 0
+    position: absolute
+    transition: transform 0.3s, border-color 0.3s
+    transform: rotate(-90deg)
+
+.menu_item_img
+  margin-right: 15px
+
+.logo_area
+  text-align: center
+
+.logo
+  display: flex
+  margin: 0 auto
+  margin-top: 35px
+
+.languageBlock
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 35px
+
+.langButton
+  display: flex
+  padding: 0 4px
+  opacity: .5
+  color: white
+  font-family: $font--istok_web
+  font-size: 18px
+  &Active
+    opacity: 1
+
+.closeClass
+  position: absolute
+  right: 12px
+
+.animatedClose
+  margin-top: 4px
+
+.ad
+  text-align: center

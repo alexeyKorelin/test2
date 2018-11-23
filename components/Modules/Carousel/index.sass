@@ -1,0 +1,98 @@
+.root
+  position: relative
+  width: 100%
+  margin: 0 auto 100px
+
+.scene
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.slide
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  text-align: center
+  z-index: 1
+  display: flex
+  justify-content: space-between
+  align-items: center
+  img
+    max-width: 100%
+
+.arrow
+  position: absolute
+  z-index: 2
+  top: 50%
+  transform: translateY(-50%)
+  width: 16px
+  height: 16px
+  display: block
+  cursor: pointer
+  border: none
+  padding: 0
+  outline: none
+  background: transparent
+  &-prev
+    left: -30px
+  &-next
+    right: -30px
+
+.dots
+  position: absolute
+  bottom: -30px
+  left: 0
+  right: 0
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: center
+
+.dot
+  display: block
+  width: 10px
+  height: 10px
+  padding: 0
+  border: 2px solid #D8D8D8
+  border-radius: 50%
+  background: transparent
+  outline: none
+  cursor: pointer
+  box-sizing: border-box
+  &:not(:last-child)
+    margin-right: 10px
+  &-active
+    border: none
+    background: #D8D8D8
+
+
+
+// Animation
+
+.leave
+  transform: translateX(0)
+
+.enterActive.enterNext,
+.enterActive.enterPrev
+  transform: translateX(0)
+  transition: transform 500ms linear
+
+.enterNext
+  transform: translateX(calc(100% + 20px))
+
+.enterPrev
+  transform: translateX(calc(-100% - 20px))
+  transition: transform 500ms linear
+
+.leaveActiveNext
+  transform: translateX(calc(-100% - 20px))
+  transition: transform 500ms linear
+
+.leave.leaveActivePrev
+  transform: translateX(calc(100% + 20px))
+  transition: transform 500ms linear

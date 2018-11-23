@@ -1,0 +1,58 @@
+@import 'styles/config.sass'
+
+.root
+  font-family: $font--istok_web
+  background: #fff
+  box-sizing: border-box
+  box-shadow: $box-shadow
+  font-size: 18px
+  border-radius: $border-radius--main
+  overflow: hidden
+  padding: 14px 16px 17px
+  width: 214px
+
+  &_fixedTop
+    position: fixed
+
+  &_absoluteBottom
+    position: absolute
+    bottom: 0px
+
+.collapse
+  &:not(:last-child)
+    margin-bottom: 10px
+
+  &_price
+    margin-top: 3px
+
+.switch:not(:last-child)
+  margin-bottom: 15px  
+
+.controls
+  margin-top: 20px
+  text-align: center
+  padding-bottom: 26px
+  position: relative
+
+  button
+    &:disabled
+      border: 2px solid #E1E8EE
+      cursor: not-allowed
+      &:hover
+        border: 2px solid #E1E8EE
+        background: none
+        color: #E1E8EE
+
+.clear
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 17px
+  text-decoration: underline
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+
+  &_active
+    color: $color--text-purple
+    cursor: pointer

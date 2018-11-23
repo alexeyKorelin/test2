@@ -1,0 +1,78 @@
+@import 'styles/config.sass'
+
+.root
+  box-shadow: $box-shadow
+  background: #fff
+  border-radius: $border-radius
+
+  &_open
+    .description
+      max-height: 999px
+      opacity: 1
+      transition: max-height 1s, opacity 0.5s
+
+    .button:after 
+      transform: rotate(180deg)
+
+  &_sm
+    .description
+      font-size: 14px
+      line-height: 21px
+
+    .title
+      padding: 20px 40px 23px 17px
+
+    .button
+      right: 8px
+      top: 17px  
+
+    .descriptionInner
+      padding: 0 17px 20px      
+
+.title
+  padding: 36px 56px 38px 30px    
+  color: $color--text
+  font-size: 18px
+  line-height: 21px
+  font-weight: bold
+  position: relative
+  cursor: pointer
+
+.button
+  $root: &
+
+  width: 30px
+  height: 30px
+  position: absolute
+  display: block
+  background: transparent
+  border: none
+  padding: 0
+  top: 36px
+  right: 24px
+  cursor: pointer
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-top: 7px solid $color--text-blue
+    border-right: 6px solid transparent
+    border-bottom: 0
+    border-left: 6px solid transparent
+    top: 12px
+    right: 9px
+    position: absolute  
+    transition: transform 0.3s 
+
+.description
+  color: $color--text-gray
+  font-size: 16px
+  max-height: 0
+  opacity: 0
+  overflow: hidden
+  transition: max-height 0.4s, opacity 0.3s
+    
+.descriptionInner
+  padding: 0 60px 45px

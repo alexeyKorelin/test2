@@ -1,0 +1,67 @@
+@import 'styles/config.sass'
+
+.root
+  margin-bottom: 11px
+
+  &_error
+    .input
+      border-color: $color--text-red
+
+.info
+  margin-bottom: 5px
+  display: flex
+  .error
+    font-size: 12px
+    font-weight: bold
+    margin-left: 10px
+    color: red
+
+.title
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  color: $color--text
+  transition: color 0.3s
+
+  &_required
+    color: $color--main
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+  &_error
+    color: $color--text-red
+
+.count
+  color: $color--text-gray
+  font-size: 12px
+  font-weight: bold
+  margin-left: auto
+
+  &_error
+    color: $color--text-red
+
+.input
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 0
+  background-color: #fff
+  font-size: 14px
+  line-height: 21px
+  color: $color--text
+  display: block
+  width: 100%
+  text-align: left
+  padding: 10px
+  transition: border-color 0.3s, box-shadow 0.3s
+
+  &:focus
+    border-color: rgba(88, 0, 255, 0.1011)
+    box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+  &::placeholder
+    color: $color--text-gray

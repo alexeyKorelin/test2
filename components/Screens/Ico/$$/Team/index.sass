@@ -1,0 +1,204 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+.undercover
+  background-image: url(https://cdn.mentalmarket.io/ico/team/undercover1.svg)
+  background-repeat: no-repeat
+  background-position: center 76px
+  position: relative
+
+.circles
+  width: 1050px
+  height: 1100px
+  display: block
+  margin-left: auto
+  margin-right: auto
+  opacity: 0
+  transition: all .3s
+
+  &_active
+    opacity: 1  
+
+.manager
+  $root: &
+
+  &__title
+    fill: #fff
+    font-size: 24px
+    line-height: 35px
+    font-weight: bold
+
+  &__role
+    fill: #DAB1FF
+    font-size: 16px
+    line-height: 23px
+
+.developer
+  $root: &
+
+  &__title
+    fill: #fff
+    font-size: 18px
+    line-height: 26px
+    font-weight: bold
+
+  &__role
+    fill: #DAB1FF
+    font-size: 14px
+    line-height: 20px    
+
+.person
+  cursor: pointer
+
+  &:hover
+    .cover
+      opacity: 1  
+
+.cover
+  opacity: 0
+  transition: all .3s     
+
+.join
+  fill: #fff
+  font-size: 14px
+  line-height: 20px
+  font-weight: bold  
+
+  &_sm
+    fill: #fff
+    font-size: 10px
+    line-height: 20px
+    font-weight: bold  
+
+.advisors
+  &__title
+    font-family: Archive
+    color: #FFBCEF
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    text-align: center
+
+  &__items
+    display: flex
+    justify-content: center
+
+  &__controls
+    text-align: center
+    margin-top: 30px
+
+.advisor
+  $root: &
+
+  &:not(:last-child)
+    margin-right: 115px
+
+  &__img
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    margin-left: auto
+    margin-right: auto
+
+    &:hover
+      #{$root}
+        &__blur
+          opacity: 0.33
+
+        &__cover
+          opacity: 0.81
+
+  &__blur
+    width: 120px
+    height: 120px
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background: linear-gradient(0deg, #8D00FF 7.94%, #F37DCB 109.67%)
+    filter: blur(27.1828px)
+    border-radius: 50%
+    opacity: 0
+    transition: all .3s
+
+  &__cover
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+    border-radius: 50%
+    opacity: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: all .3s
+
+  &__join
+    color: #fff
+    font-weight: bold
+    font-size: 10px
+    line-height: 20px
+
+  &__title
+    font-weight: bold
+    font-size: 18px
+    line-height: 26px
+    color: #fff
+    margin-top: 20px
+
+.currency
+  position: absolute
+
+  &_1
+    bottom: -8px
+    left: 82px
+
+  &_2
+    bottom: 19px
+    right: -90px
+
+  &_3
+    top: 257px
+    left: -70px
+
+.popup
+  position: relative
+  padding-bottom: 30px
+
+  &__header
+    color: #FFBCEF
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+
+  &__description
+    color: #fff
+    font-size: 14px
+    line-height: 22px
+    margin-top: 38px
+
+  &__mail
+    color: #FFBCEF
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    margin-top: 27px
+    text-decoration: none
+    display: inline-block
+
+  &__copy
+    position: absolute
+    bottom: -25px
+    left: 50%
+    transform: translate(-50%,0)

@@ -1,0 +1,99 @@
+@import 'styles/config.sass'
+
+.root
+  background-image: url(https://cdn.mentalmarket.io/ico/emission/mntl-rounds-2.svg)
+  background-position: top center
+  background-repeat: no-repeat
+  padding-top: 260px
+  background-size: auto 480px
+
+.caps
+  text-align: center
+  margin-top: 30px
+
+  &__inner
+    display: inline-flex
+    justify-content: flex-start
+    flex-wrap: wrap
+
+  &__cap
+    margin-bottom: 10px
+
+    &:not(:last-child)
+      margin-right: 15px
+
+  &__icon
+    margin-left: 5px
+
+.items
+  position: relative
+  margin-top: 30px
+
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/currencies/bch.png)
+    position: absolute
+    bottom: -45px
+    right: -20px
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 30px
+
+.card
+  width: 220px
+  min-height: 220px
+  max-height: 220px
+  z-index: 1
+  overflow: hidden
+  border-radius: 50%
+  background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+  opacity: 0
+  transition: opacity .3s, max-height .5s, border-radius 0s .5s, width 0s .5s
+  
+  &__card
+    opacity: 0
+    transition: .5s
+
+  &__icon
+    margin-left: 5px
+
+.round
+  position: absolute
+  top: 0
+  z-index: -1
+
+.item
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 1
+
+  &_active
+    .card
+      opacity: 1
+      border-radius: 10px
+      width: 320px
+      max-height: 900px
+      transition: max-height .5s, opacity .3s .2s
+
+      &__card
+        opacity: 1
+
+.texts
+  margin-top: 75px
+
+  &__text
+    &:not(:last-child)
+      margin-bottom: 30px
+
+.text
+  text-align: center
+
+  &__description
+    color: #E5D8FF
+    font-size: 12px
+    line-height: 16px
+    margin-top: 25px
+
+  

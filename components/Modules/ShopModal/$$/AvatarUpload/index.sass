@@ -1,0 +1,33 @@
+@import 'styles/config.sass'
+
+.root
+  margin: 20px 0 10px 0
+  position: relative
+  
+.avatar
+  width: 69px
+  height: 69px
+  border-radius: 50%
+  background: #fff
+  box-shadow: 0 0 2px 0 #E1E8EE
+  overflow: hidden
+  display: inline-block
+  float: left
+  img
+    width: 69px
+  &_remove
+    position: absolute
+    top: -4px
+    left: 54px
+
+.avatar_button
+  display: flex
+  height: 69px
+  align-items: center
+  span
+    text-decoration: underline
+    cursor: pointer
+    font-size: 12px
+    font-weight: bold
+    padding-left: 15px
+    color: $color--text-gray

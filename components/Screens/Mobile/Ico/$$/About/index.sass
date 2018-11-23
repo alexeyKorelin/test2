@@ -1,0 +1,63 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+  min-height: 590px
+  z-index: 1
+
+.mainImage
+  user-select: none
+  position: absolute
+  z-index: -1
+  right: -360px
+  top: 50%
+  transform: translate(0,-50%)
+
+.description
+  color: #FFEFF6
+  font-size: 16px
+  line-height: 26px
+  text-align: center
+
+.features
+  margin: 20px 0 0
+  padding: 0
+  list-style: none
+
+.feature
+  padding-left: 22px
+  position: relative
+
+  &:not(:last-child)
+    margin-bottom: 11px
+
+  &:before
+    content: ''
+    position: absolute
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+    left: 0
+    top: 5px
+
+  &__title
+    font-weight: bold
+    font-size: 12px
+    line-height: 22px
+    color: #FFEFF6
+
+  &__description
+    font-size: 12px
+    line-height: 16px
+    color: #E5D8FF
+    margin-top: 5px
+
+.container
+  position: relative
+
+.controls
+  text-align: center
+  margin-top: 30px
+
+  

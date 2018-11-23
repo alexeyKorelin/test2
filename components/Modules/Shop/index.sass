@@ -1,0 +1,112 @@
+@import 'styles/config.sass'
+
+.root
+  box-shadow: $box-shadow
+  border-radius: $border-radius--main
+  padding: 20px
+  margin-bottom: 20px
+  display: flex
+  &_gradient
+    background-image: linear-gradient(0deg, #7C10FF 0%, #A95CFF 100%)
+    .count
+      color: $color--text-white
+    .categories
+      .bage
+        &_other
+          font-size: 11px
+          font-weight: bold
+          color: $color--text-white
+    .name
+      a
+        color: $color--text-white
+    .description
+      color: $color--text-white
+      opacity .8
+
+.left
+  padding: 0
+  flex: 49px
+  max-width: 49px
+  margin-right: 20px
+
+.right
+  padding: 0
+
+.count
+  font-size: 12px
+  font-weight: bold
+  color: $color--text-purple
+  display: flex
+  justify-content: center
+  i
+    margin-right: 6px
+
+.edit
+  font-size: 12px
+  color: $color--text-purple
+  position: absolute
+  top: 4px
+  right: 0
+  i
+    cursor: pointer
+
+.categories
+  margin-bottom: 10px
+  .bage
+    &:not(:last-child)
+      margin-right: 5px
+    &_other
+      font-size: 11px
+      font-weight: bold
+      color: $color--text-purple
+
+.avatar
+  border-radius: 50%
+  overflow: hidden
+  background: #fff
+  color: $color--text-purple
+  margin-bottom: 10px
+  a
+    width: 49px
+    height: 49px
+    display: block
+    text-decoration: none
+    div
+      background-size: 100%
+
+.name
+  font-size: 18px
+  font-weight: bold
+  text-decoration: underline
+  margin-bottom: 6px
+  a
+    color: $color--text
+
+.domain
+  font-size: 12px
+  font-weight: bold
+  margin-bottom: 6px
+  a
+    text-decoration: none
+    color: $color--text-purple
+
+.description
+  font-size: 12px
+  color: $color--text-gray
+
+.info
+  font-size: 12px
+  color: $color--text-light-gray
+  margin-top: 10px
+  display: flex
+  .icon
+    width: 12px
+    margin-right: 6px
+    justify-content: center
+  div
+    display: flex
+  i
+    color: $color--text-purple
+  a
+    color: $color--text-light-gray
+    text-decoration: none

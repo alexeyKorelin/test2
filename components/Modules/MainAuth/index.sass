@@ -1,0 +1,139 @@
+@import "styles/config.sass"
+
+.login
+  margin-top: 35px
+
+  &_sm
+    min-height: 256px 
+
+    @media screen and (min-width: 600px)  
+      margin-top: 10px
+
+.steps
+  display: flex
+  justify-content: center
+  margin-bottom: 12px
+
+.step
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  font-weight: bolder
+
+  &:hover
+    cursor: pointer
+
+  &_active
+    .text
+      color: $color--text
+
+.icon
+  display: block
+  margin-bottom: 18px
+
+  &_right
+    transform: translateX(100%)
+    transition: all 0.3s
+
+  &_left
+    transform: translateX(0)
+    transition: all .3s
+
+.pointer
+  cursor: pointer
+
+.text
+  padding: 0 10px
+  color: $color--text-gray
+  font-family: $font--istok_web
+  font-size: 24px
+  font-weight: bold
+  transition: all 0.3s
+
+.description
+  color: $color--text-gray
+  font-size: 16px
+  line-height: 22px
+  text-align: center
+  margin-bottom: 24px
+
+.blue
+  color: $color--text-blue
+  text-decoration: none
+
+.controls
+  text-align: center
+
+.button
+  padding-left: 42px
+  padding-right: 42px
+
+.inputControl
+  margin-top: 68px
+  position: relative
+  margin-left: auto
+  margin-right: auto
+
+.arrowButton
+  width: 50px
+  position: absolute
+  padding-left: 0
+  padding-right: 0
+  top: 0
+  right: -1px   
+
+.buttonArrowRight
+  font-size: 21px
+  margin-top: -1px 
+
+.input
+  color: $color--text
+  font-size: 16px
+  border-radius: 2px 0 0 2px
+  border: 1px solid #E1E8EE
+  outline: none
+  display: inline-block
+  border-radius: $border-radius--main
+  width: 100%
+  box-sizing: border-box
+  line-height: 21px
+  margin-right: -2px
+  padding: 12px 60px 16px 19px
+  vertical-align: top
+  height: 50px
+
+  &::placeholder
+    color: $color--text-gray
+
+.error
+  font-size: 14px
+  line-height: 16px
+  color: $color--text-red
+  margin-top: 12px
+
+.imageContainer
+  display: flex
+  justify-content: center
+  margin-bottom: 25px
+
+.hello
+  font-size: 24px
+  font-weight: bold
+  font-family: $font--istok_web
+  color: #fff
+  margin-bottom: 12px
+
+.oneOfUs
+  font-size: 16px
+  font-family: $font--istok_web
+  color: white
+  margin-bottom: 46px
+
+.successControls
+  margin-bottom: 48px
+
+.adsLink
+  font-size: 12px
+  a
+    color: white

@@ -1,0 +1,89 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  height: 51px
+
+  &_disabled
+
+  &#{$root}_sm
+    height: 61px
+
+    .inputs
+      margin-bottom: 20px
+
+      &__input
+        font-size: 12px
+
+.inputs
+  $root: &
+
+  display: flex
+  flex-wrap: wrap
+  margin-right: -4px
+  margin-left: -4px  
+  margin-bottom: 10px
+
+  &_active
+    #{$root}__input:not(#{$root}__input_error)
+      border-color: $color--main
+      color: $color--main
+      transition: all 0.3s
+
+  &__col
+    width: 50%
+    box-sizing: border-box
+    padding: 0 4px
+
+  &__input
+    color: $color--text-gray
+    box-sizing: border-box
+    width: 100%
+    display: block
+    border: 1px solid rgba(151, 151, 151, 0.5)
+    border-radius: 4px
+    height: 24px
+    outline: none
+    padding: 0 10px
+    text-align: center
+    transition: all 0.3s
+    font-size: 14px
+
+    &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+      -webkit-appearance: none
+      -moz-appearance: none
+      appearance: none
+      margin: 0
+
+    &:not(:disabled):not(&_error):hover, &:not(:disabled):not(&_error):focus
+      border-color: $color--main
+      color: $color--main
+      transition: all 0.3s
+
+    &_error
+      border-color: $color--text-red
+      color: $color--text-red
+
+.range
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    height: 6px
+    box-sizing: border-box
+    width: 100%
+    border-radius: 40px
+    background-color: #F4F7FA
+    border: 1px solid #DFE6EE
+    position: absolute
+    top: 5px
+
+  &__container
+    position: absolute
+    left: 0
+    right: 0
+    padding: 0 7px
+    z-index: 1  
+      

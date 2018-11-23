@@ -1,0 +1,59 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+  
+  overflow: hidden
+  margin-left: -10px
+  margin-right: -10px
+
+  &_nowrap
+    .statuses
+      display: inline-flex
+
+    #{$root}__inner
+      margin-bottom: -50px
+
+  &_wrap
+    .status
+      margin-bottom: 5px    
+
+    #{$root}__inner
+      overflow-x: auto
+      margin-bottom: -55px 
+
+  &__inner
+    overflow-y: hidden
+    overflow-x: scroll
+    padding-bottom: 50px
+    -webkit-overflow-scrolling: touch
+
+.categories
+  padding: 15px 10px
+
+.category
+  display: inline-flex
+  border: 1px solid
+  border-radius: 100px
+  box-shadow: 0 1px 7px 1px rgba(183,155,218,0.19)
+  padding: 1px 10px
+  font-family: $font--istok_web
+  font-size: 12px
+  line-height: 14px
+  font-weight: bold
+  cursor: pointer
+  white-space: nowrap
+  background-color: #fff
+  transition: background 0.3s 0.3s, box-shadow 0.3s 0.3s, border-color 0.3s 0.3s, padding 0.3s
+
+  &:not(:last-child)
+    margin-right: 6px
+  &.all
+    border-color: #000
+    color: #000
+  &.selected
+    border-color: #000 !important
+    background: transparent !important
+    color: #000 !important
+    box-shadow: none
+    transition: background 0.3s, box-shadow 0.3s, border-color 0.3s, padding 0.3s 0.3s

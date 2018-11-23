@@ -1,0 +1,52 @@
+@import 'styles/config.sass'
+
+.root
+  background: #fff
+  border-radius: 8px
+  box-shadow: 0px 1px 6px rgba(183, 155, 218, 0.188887)
+  padding: 5px 5px 5px 10px
+  display: flex
+  flex-wrap: nowrap
+  align-items: center
+
+  &_me
+    padding: 10px
+
+.avatarLink
+  text-decoration: none
+
+.avatar
+  margin-right: 10px
+
+.info
+  height: 38px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  overflow: hidden
+
+  &:not(:last-child)
+    margin-right: 10px
+
+.title
+  overflow: hidden
+  text-overflow: ellipsis
+  font-size: 12px
+  line-height: 14px
+  color: $color--text
+  font-weight: bold
+  text-decoration: none
+  white-space: nowrap
+
+.date  
+  font-size: 10px
+  line-height: 14px
+  color: $color--text-gray
+  white-space: nowrap
+
+.link
+  padding-left: 5px
+  padding-right: 5px  
+  width: 116px
+  margin-left: auto
+  flex-shrink: 0

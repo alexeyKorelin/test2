@@ -1,0 +1,115 @@
+@import 'styles/config.sass'
+
+.form
+  margin-top: 38px
+  font-family: $font--istok_web
+
+  &__top
+    background: #fff
+    border-radius: $border-radius--main
+    box-shadow: $box-shadow
+    padding: 30px 20px 39px
+    &_mobile
+      background: #fff
+      box-shadow: 0 1px 7px 0 #E1E8EE
+      padding: 10px
+      margin: 0 -10px
+
+  .currencyPrice
+    color: $color--text-gray
+    display: flex
+    align-items: center
+
+    &__description
+      font-size: 12px
+      font-weight: bold
+
+    &__value
+      font-size: 18px
+      margin-left: 5px
+
+  &__bottom
+    display: flex
+    margin-top: 30px
+
+  .checkbox
+    margin-top: 6px
+    margin-bottom: 24px
+    padding-left: 45px
+    display: inline-block
+
+    &Label
+      font-size: 18px
+      line-height: 21px
+
+  .inputDescribe
+    color: $color--text-gray
+    font-size: 12px
+    font-weight: bold
+
+    &__b
+      color: $color--text-blue
+      font-size: 18px
+
+  .notes
+    font-size: 14px
+    line-height: 16px
+    color: $color--text-gray
+
+    &__note
+      width: 100%
+
+      &:not(:last-child)
+        margin-bottom: 17px
+
+    &__b
+      font-weight: bold
+      color: $color--text-blue
+
+    &__a
+      color: $color--text-gray
+
+.nextButton
+  border-radius: 100px
+  margin-left: auto
+  &_mobile
+    margin-right: auto
+
+.currencyContainer
+  padding-left: 0
+  display: flex
+  align-items: center
+
+.icon_separator
+  display: flex
+  align-items: center
+  padding: 0 12px 0 24px
+  color: #CECECE
+  &_mobile
+    display: block
+    width: 100%
+    padding: 0
+    margin: -10px 0 10px 15px
+    &:before
+      transform: rotate(90deg)
+
+.disabled
+  span
+    color: #CECECE
+  input
+    color: #CECECE
+    border: 1px solid rgba(206,206,206,0.48)
+
+.indexing
+  margin-bottom: 16px
+  &_label
+    font-size: 18px
+    &_mobile
+      font-size: 12px
+
+@media screen and (min-width: 600px)
+  .form__top_mobile
+    margin: 0
+    padding: 15px
+  .indexing_label_mobile
+    font-size: 18px

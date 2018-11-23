@@ -1,0 +1,229 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+.description
+  text-align: center
+  font-size: 18px
+  line-height: 28px
+  color: #fff
+
+.circles
+  position: relative
+
+  &__inner
+    width: 850px
+    height: 850px
+    display: block
+    margin-top: 20px
+    margin-left: auto
+    margin-right: auto
+    background-image: url(https://cdn.mentalmarket.io/ico/market/undercover.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 750px 750px
+    position: relative
+
+    &:hover
+      .circle
+        &__inner 
+          animation-play-state: paused
+
+      .market
+        &__inner
+          animation-play-state: paused
+
+        &__circle
+          animation-play-state: paused
+
+        &__container
+          animation-play-state: paused
+
+.circle
+  position: absolute
+  top: 50%
+  left: 50%
+  z-index: 1
+  border-radius: 50%
+  transform: translate(-50%,-50%)
+
+  &_active
+    z-index: 2
+
+  &__inner
+    width: 100%
+    height: 100%
+    position: relative
+    animation-name: rotation
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+    border-radius: 50%
+
+.market
+  $root: &
+
+  position: absolute
+  border-radius: 50%
+  transform: translate(-50%,-50%)
+  z-index: 2
+
+  &:hover
+    z-index: 3
+
+    #{$root}
+      &__circle
+        animation: 0
+
+      &__container
+        animation: 0
+
+      &__label
+        color: #fff
+
+      &__content
+        top: -70px
+        width: 150px
+        height: 150px
+        transition: all .2s
+
+        &:after
+          opacity: 0
+
+        &:before
+          opacity: 1
+
+      &__back
+        transform: translate(0,0) !important
+        transition: all .2s
+
+      &__description
+        opacity: 1
+        transition: opacity .3s .2s
+
+  &__inner
+    width: 100%
+    height: 100%
+    position: relative
+    animation-name: reverseRotation
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+
+  &__btn
+    position: relative
+
+  &__circle
+    z-index: 1
+    //animation-name: rotation
+    //animation-iteration-count: infinite
+    //animation-timing-function: linear
+    //animation-duration: 3s
+
+  &__back
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    position: relative
+    transition: all .2s .3s
+
+  &__label
+    position: absolute
+    color: #E5D8FF
+    font-weight: bold
+    font-size: 18px
+    line-height: 26px
+    left: 50%
+    transform: translate(-50%,0)
+    top: -35px
+    z-index: 2
+    transition: color .3s
+
+  &__container
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    //animation-name: reverseRotation
+    //animation-iteration-count: infinite
+    //animation-timing-function: linear
+    //animation-duration: 3s
+
+  &__content
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    position: absolute
+    top: 0
+    left: 50%
+    overflow: hidden
+    transform: translate(-50%,0)
+    box-shadow: 0px 0px 30px 5px rgba(156, 18, 246, 0.45)
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: width .2s .3s, height .2s .3s, top .2s .3s
+
+    &:after, &:before
+      content: ''
+      position: absolute
+      z-index: -1
+      display: block
+      top: 0
+      left: 0
+      opacity: 1
+      width: 100%
+      height: 100%
+      border-radius: 50%
+      transition: opacity .5s
+
+    &:after
+      background: linear-gradient(180deg, #8D00FF 0%, #F37DCB 325.87%)
+
+    &:before
+      opacity: 0
+      background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 109.67%)
+
+  &__description
+    opacity: 0
+    position: absolute 
+    top: 73px
+    transition: opacity .3s
+
+  &__line
+    background: #FFEFF6 
+    height: 1px
+    width: 60px
+    margin-left: auto
+    margin-right: auto
+    opacity: .31
+    margin-top: 5px
+    margin-bottom: 7px
+
+  &__value
+    color: #fff
+    font-size: 14px
+    line-height: 16px
+
+.currency
+  position: absolute
+  
+  &_1
+    top: 51px
+    right: -90px
+
+  &_2
+    top: 244px
+    left: -90px
+
+@keyframes rotation
+  from
+    transform: rotate(0deg)
+  
+  to
+    transform: rotate(360deg) 
+
+@keyframes reverseRotation
+  from
+    transform: rotate(360deg)
+  
+  to
+    transform: rotate(0deg)     

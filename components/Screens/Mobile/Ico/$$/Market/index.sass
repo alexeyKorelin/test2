@@ -1,0 +1,122 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/currencies/btc.png)
+    position: absolute    
+    bottom: -103px
+    left: 0px
+
+.description
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  color: #FFEFF6
+
+.markets
+  height: 292px
+  width: 292px
+  position: relative
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  background-position: center
+  margin-left: auto
+  margin-right: auto
+  margin-top: 40px
+  z-index: 1
+      
+.market
+  $root: &
+
+  display: block
+  transform: translate(-50%,-50%)
+  border-radius: 50%
+  position: absolute
+  z-index: 2
+  padding: 0
+  transition: all .3s .3s
+
+  &:after
+    content: ''
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+    position: absolute
+    transform: translate(-50%,-50%)
+    z-index: -1
+    transition: all .3s .3s
+
+  &_active
+    z-index: 1
+    top: 0
+    left: 50%
+    transform: translate(-50%,0)
+    transition: all .3s
+
+    &:after
+      opacity: .75
+      transition: all .3s
+
+    #{$root}__content
+      max-height: 900px
+      max-width: 900px
+      opacity: 1
+      transition: opacity .3s .3s, max-height 0s .3s, max-width 0s .3s
+
+    #{$root}__label
+      opacity: 0
+      max-width: 0
+      max-height: 0
+      transition: opacity .3s, max-height 0s .3s, max-width 0s .3s
+
+  &__title, &__label
+    color: #FFD8FA
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+
+  &__title
+    margin-bottom: 10px
+
+  &__label
+    position: absolute
+    overflow: hidden
+    max-width: 900px
+    max-height: 900px
+    top: -20px
+    left: 0
+    transition: opacity .3s .3s, max-height 0s .3s, max-width 0s .3s
+
+  &__value
+    color: #fff
+    font-size: 14px
+    line-height: 16px
+
+  &__content
+    position: absolute
+    overflow: hidden
+    max-height: 0
+    max-width: 0
+    opacity: 0
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    transition: opacity .3s, max-height 0s .3s, max-width 0s .3s
+
+    &_sm
+      #{$root}__value
+        font-size: 12px
+
+  &__line 
+    height: 1px
+    width: 60px
+    margin-left: auto
+    margin-right: auto
+    background: #FFEFF6
+    margin-top: 4px
+    margin-bottom: 6px
+    opacity: 0.31
+

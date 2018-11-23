@@ -1,0 +1,65 @@
+@import 'styles/config.sass'
+
+.price
+  font-size: 18px
+  line-height: 18px
+  margin-bottom: 4px
+  
+  &__value
+    color: $color--text
+    font-weight: bold
+    margin-right: 3px
+
+  &__coin
+    color: $color--text-purple
+    font-family: $font--istok_web
+    text-transform: uppercase
+    font-weight: bold
+
+  &__usd
+    font-size: 14px
+    color: $color--text-ultra-light-gray
+    margin-left: 10px
+
+.currencies
+  display: flex
+  align-items: center
+
+  &__title
+    font-size: 10px
+    line-height: 12px
+    margin-right: 5px
+    color: $color--text-gray
+
+  &__coin
+    height: 24px
+    width: 24px
+    text-align: center
+    border-radius: 50%
+    background: #DADADA    
+    color: #fff
+    padding: 0
+    border: 1px solid #dadada
+    box-sizing: border-box
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    box-shadow: 0px 0px 4px rgba(225, 232, 238, 0)
+    transition: all 0.3s
+
+    &:hover:not(&_active)
+      background: $color--text-purple
+      border-color: $color--text-purple
+      box-shadow: 0px 0px 4px rgba(225, 232, 238, 0.820992)
+
+    &_active
+      background: #fff
+      border-color: #F4F7FA
+      color: $color--text-blue
+
+    &:not(&_active)
+      cursor: pointer
+
+    &:not(:last-child)
+      margin-right: 2px
+

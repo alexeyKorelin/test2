@@ -1,0 +1,116 @@
+@import 'styles/config.sass'
+
+.root
+  &_error
+    .filesArea
+      border: 1px solid $color--text-red
+      box-shadow: 0 0 5px rgba(88, 0, 255, 0)
+
+.info
+  margin-bottom: 5px
+
+.title
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  color: $color--text
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+  &_error
+    color: $color--text-red
+
+.filesArea
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  height: 158px
+  font-size: 18px
+  line-height: 28px
+  color: $color--text-gray
+  text-align: center
+  box-shadow: 0 0 5px rgba(88, 0, 255, 0)
+  transition: box-shadow 0.3s, border-color 0.3s
+
+  &:hover, &:focus
+    border-color: rgba(88, 0, 255, 0.1011)
+    box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+.emptyMessage
+  margin-top: 32px
+
+.selectFromPc
+  display: inline
+  padding: 0
+  text-decoration: underline
+  border: none
+  background-color: transparent
+  font-size: 18px
+  line-height: 28px
+  color: $color--text-gray
+  cursor: pointer
+
+  &_small
+    font-size: 12px
+    line-height: 19px
+    color: $color--text-blue
+
+.info
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 19px
+
+.photos
+  margin: 22px 10px 0
+
+  &__col
+    padding-left: 15px
+    padding-right: 15px
+    
+    &_hidden
+      display: none
+
+.photo
+  position: relative
+
+  &__image
+    height: 112px
+    width: 112px
+    background-color: #E3E3E3
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    border-radius: 50%
+
+  &__remove
+    border: none
+    background: transparent
+    padding: 0
+    position: absolute
+    top: 0
+    right: 0
+    cursor: pointer
+
+    &Icon
+
+.plus
+  box-shadow: 0px 1px 7px rgba(221, 227, 255, 0.45)   
+  border-radius: 50%
+  background: #fff  
+  border: none 
+  width: 30px
+  height: 30px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  align-self: center
+  cursor: pointer
+  padding: 0
+  margin-left: -3px

@@ -1,0 +1,42 @@
+@import 'styles/config.sass'
+
+.root
+  margin-left: -45px
+  margin-right: -45px
+  padding-left: 45px
+  padding-right: 45px
+  padding-bottom: 20px
+
+  .slider
+    margin-left: -10px
+    margin-right: -10px
+
+.item
+  box-sizing: border-box
+  padding-left: 10px
+  padding-right: 10px     
+
+.arrow
+  position: absolute
+  top: 95px
+
+  &_left
+    left: -32px
+
+  &_right
+    right: -32px  
+
+.page
+  $root: &
+
+  box-sizing: border-box
+  width: 8px
+  height: 8px
+  border: 2px solid $color--main
+  border-radius: 50%
+  display: block
+  background: #fff
+  padding: 0
+  cursor: pointer
+  transition: all 0.3s
+

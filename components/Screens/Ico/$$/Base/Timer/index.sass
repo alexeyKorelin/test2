@@ -1,0 +1,57 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+
+  &_default
+    .time
+      width: 92px
+      height: 92px
+  
+      &:not(:last-child)
+        margin-right: 9px
+
+    .unit
+      line-height: 16px
+      font-size: 12px
+
+    .value
+      font-size: 36px
+      line-height: 36px
+
+  &_sm
+    justify-content: center
+
+    .time
+      width: 64px
+      height: 64px
+  
+      &:not(:last-child)
+        margin-right: 5px
+
+    .unit
+      line-height: 10px
+      font-size: 10px
+
+    .value
+      font-size: 32px
+      line-height: 32px
+
+.time
+  box-sizing: border-box
+  border: 2px solid rgba(255,255,255,0.16)
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.content
+  text-align: center
+
+.value
+  color: #FFBCEF
+  font-family: Archive
+
+.unit
+  color: #F37DCB
+  font-size: 12px

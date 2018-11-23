@@ -1,0 +1,172 @@
+@import 'styles/config.sass'
+
+.content
+  //margin-top: 19px
+  position: relative
+
+.scrollArea
+  padding-top: 20px !important
+  //padding-bottom: 20px !important
+  text-align: center
+
+.view
+  overflow: hidden !important
+  text-align: center
+
+.categories
+  padding: 40px 29px 57px !important
+  display: inline-flex
+
+.categoryContainer
+  position: relative
+  width: 200px
+  height: 207px
+
+  &:not(:last-child)
+    margin-right: 10px
+
+.category
+  background: #fff
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 207px
+  border-radius: 4px
+  text-decoration: none
+  box-sizing: border-box
+  padding: 18px 19px 21px
+  box-shadow: 0 1px 9px rgba(210, 204, 255, 0.3)
+  transition: top 0.3s, right 0.3s, left 0.3s, height 0.3s, box-shadow 0.3s, padding-top 0.3s, padding-left 0.3s, padding-right 0.3s
+
+  &:hover
+    height: 252px
+    top: -15px
+    left: -15px
+    right: -15px
+    padding-left: 34px
+    padding-right: 34px
+    padding-top: 33px
+    z-index: 1
+    box-shadow: 0 1px 22px rgba(210, 204, 255, 0.3)
+
+    .title
+      color: #5800FF
+
+    .li
+      color: #242424
+
+      &:before
+        background: #823FFF
+
+    .showAll
+      opacity: 1
+      transition: opacity 0.4s 0.25s, border-color 0.3s
+
+      &:hover
+        border-color: $color--text-blue
+
+.imageContainer
+  text-align: center
+  height: 50px
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  color: $color--text-blue
+  margin-bottom: 13px
+
+.title
+  color: #242424
+  font-size: 18px
+  line-height: 21px
+  font-weight: bold
+  text-align: center
+  transition: all 0.3s
+
+.ul
+  margin: 13px 0 0
+  padding: 0
+  list-style: none
+
+.li
+  text-align: left
+  color: #9B9B9B
+  font-size: 12px
+  line-height: 24px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  text-transform: lowercase
+  transition: all 0.3s
+
+  &:before
+    content: ''
+    width: 4px
+    height: 4px
+    display: inline-block
+    border-radius: 50%
+    background: $color--text-blue
+    margin-right: 8px
+    margin-bottom: 2px
+    transition: all 0.3s
+
+.track
+  height: 11px !important
+  width: 450px
+  background: rgba(210, 204, 255, 0.19)
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  border-radius: 9px
+
+.thumb
+  height: 11px !important
+  background: rgba(238, 228, 255, 0.74)
+  border-radius: 9px
+
+.controls
+  display: flex
+  align-items: center
+  justify-content: center
+  //margin-top: 25px
+
+.toCatalog
+  font-size: 14px
+  line-height: 16px
+  color: #7200FF
+  margin-left: 28px
+
+.controls
+  text-align: center
+  margin-top: 25px
+
+.showAll
+  border: none
+  background: transparent
+  color: $color--text-blue
+  font-size: 10px
+  line-height: 12px
+  position: absolute
+  bottom: 24px
+  cursor: pointer
+  opacity: 0
+  padding: 0
+  border-bottom: 1px solid transparent
+
+.scrollbarContainer
+  height: 11px !important
+  background: rgba(210, 204, 255, 0.19) !important
+  border-radius: 9px
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+
+.scrollbar
+  height: 11px !important
+  background: rgba(238, 228, 255, 0.74) !important
+  border-radius: 9px
+  margin-top: 0 !important

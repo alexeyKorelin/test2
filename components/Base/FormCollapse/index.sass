@@ -1,0 +1,78 @@
+@import 'styles/config.sass'
+
+.root
+  &_open
+    .children
+      max-height: 9999px
+      opacity: 1
+      overflow: visible
+      transition: max-height 1s, opacity 0.5s
+
+    .title:after 
+      transform: rotate(180deg)
+
+  &_collapsed
+    .title
+      color: $color--text-gray 
+      
+      &:after
+        border-top: 5px solid $color--text-gray   
+
+    .message
+      opacity: 1
+      max-width: 999px
+      max-height: 999px
+      transition: opacity 0.3s
+
+.title
+  padding: 5px 15px 5px 0    
+  color: $color--text
+  font-size: 18px
+  font-weight: bold
+  position: relative
+  cursor: pointer
+  transition: all 0.3s
+  display: flex
+  align-items: center
+  i
+    color: #6700FF
+    margin-right: 14px
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-top: 5px solid $color--main
+    border-right: 4px solid transparent
+    border-bottom: 0
+    border-left: 4px solid transparent
+    top: calc(50% - 2.5px)
+    right: 0
+    position: absolute
+    transition: transform 0.3s, border-color 0.3s
+
+  &_disabled
+    &:after
+      border: 0
+      
+.message
+  color: $color--text-gray
+  font-size: 8px
+  opacity: 0
+  transition: opacity 0.3s, max-width 0s 0.3s, max-height 0s 0.3s
+  max-width: 0
+  max-height: 0
+  display: inline-flex
+  margin-bottom: 1px
+
+.children
+  color: $color--text-gray
+  font-size: 16px
+  max-height: 0
+  opacity: 0
+  overflow: hidden
+  transition: max-height 0.4s, opacity 0.3s
+    
+.childrenInner
+  padding: 0 0 5px

@@ -1,0 +1,205 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  position: relative
+  background: #fff
+  border-radius: 8px
+  box-shadow: $box-shadow
+  overflow: hidden
+
+  &:hover
+    .title
+      color: $color--text
+
+  .same
+    .top
+      height: 100px
+
+  &_inactive
+    .price
+      color: $color--text-gray
+
+.categoryLink
+  position: absolute
+  max-width: 100%
+
+  &:last-child:not(:first-child)
+    top: 25px
+
+.a
+  text-decoration: none
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.addFavorite
+  background: $gradient--main
+  border-radius: 100%
+  position: absolute
+  top: -30px
+  right: 9px
+  height: 30px
+  width: 30px
+  z-index: 3
+  display: flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+
+.bottom
+  padding-top: 13px
+  position: relative
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 18px
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.top
+  background-color: $color--text-light-gray
+  overflow: hidden
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 140px
+
+.image
+  width: 100%
+  height: auto
+
+.info
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  box-sizing: border-box
+  padding: 10px 10px 15px
+  height: 100%
+  width: 100%
+
+.likeButton
+  position: absolute
+  top: -15px
+  right: 10px
+  z-index: 3
+
+.bage
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  max-width: 100%
+
+.category
+  color: #fff
+
+.title
+  font-weight: bold
+  display: -webkit-box
+  color: $color--text
+  font-size: 12px
+  line-height: 14px
+  box-sizing: border-box
+  overflow: hidden
+  text-overflow: ellipsis
+  margin-top: 5px
+  max-height: 28px
+  -webkit-line-clamp: 2
+  -webkit-box-orient: vertical
+  transition: color .4s ease-in-out
+
+.price
+  color: $color--text
+  font-size: 14px
+  line-height: 16px
+  box-sizing: border-box
+  font-family: $font--roboto
+  margin-top: 12px
+
+  &__value
+    color: $color--text-gray
+
+  &__currency
+    text-transform: uppercase
+    color: $color--text-gray
+    margin-right: 5px
+
+  &__usd
+    display: inline-block
+
+.usd
+  color: $color--text-ultra-light-gray
+
+  &__equal
+    margin-right: 5px
+
+.editLink
+  right: 5px
+  top: 5px
+  position: absolute
+  display: flex
+  width: 20px
+  height: 20px
+  align-items: center
+  justify-content: center
+  z-index: 1
+  background: transparent
+  border: none
+  padding: 0
+  cursor: pointer
+  z-index: 2
+
+.publicate
+  color: #fff
+  font-weight: bold
+  text-decoration: underline
+  font-size: 12px
+  line-height: 14px
+  border: none
+  background: transparent
+  padding: 0
+  cursor: pointer
+  position: absolute
+  bottom: 23px
+  right: 17px
+  z-index: 3
+
+.bar
+  position: absolute
+  top: 10px
+  left: 10px
+  right: 10px
+  display: inline-block
+  box-sizing: border-box
+  z-index: 1
+
+  &_user
+    .categoryLink
+      &:first-child:not(:last-child)
+        max-width: 82%
+        max-width: calc(100% - 20px)
+
+.status
+  position: absolute
+  top: -7px
+  right: 10px
+
+@media screen and (min-width: 600px)
+  .price
+    font-size: 14px
+    line-height: 16px
+
+  .bar
+    font-size: 12px
+
+  .title
+    font-size: 16px
+    line-height: 19px
+    max-height: 38px

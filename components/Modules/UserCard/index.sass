@@ -1,0 +1,109 @@
+@import 'styles/config.sass'
+
+.root
+  border-radius: $border-radius--main
+  box-shadow: $box-shadow
+  background: #fff
+  text-align: center
+  position: relative
+  padding: 20px
+
+  &_inactive
+    // .username
+    //   color: $color--text-gray
+
+    .date
+      color: $color--text-gray
+
+    .description
+      color: $color--text-gray
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 8px
+  &:hover
+    i
+      color: $color--main
+
+.buttonIcon
+  transition: color .2s
+  margin-left: 10px
+
+.status
+  position: absolute
+  left: 21px
+  top: 20px
+
+.a
+  text-decoration: none
+  color: $color--text
+
+.avatar
+  display: inline-block
+  text-decoration: none
+  margin-bottom: 13px
+  cursor: pointer
+
+.image
+  width: 100%
+  height: 100%
+
+.info
+  display: block
+
+.seller
+  font-size: 14px
+  line-height: 16px
+  color: $color--text-gray
+  margin-bottom: 4px
+
+.name
+  font-weight: bold
+  font-size: 18px
+  line-height: 21px
+  color: $color--text
+  margin-bottom: 4px
+  text-decoration: none
+  a
+    cursor: pointer
+
+.username
+  font-size: 14px
+  line-height: 16px
+  color: $color--text-purple
+  text-decoration: none
+  margin-left: 6px
+
+.date
+  font-size: 14px
+  line-height: 16px
+  color: $color--text-gray
+
+.description
+  font-size: 12px
+  line-height: 14px
+  color: $color--text
+  overflow: hidden
+  text-overflow: ellipsis
+
+.controls
+  margin: 23px auto 20px auto
+  width: 180px
+  &_long
+    margin: 23px auto 20px auto
+    width: 260px
+
+.link
+  margin-top: 15px
+
+.telegramIcon
+  color: white
+  margin-left: 10px
+
+.label
+  font-size: 12px
+  font-weight: bold
+  color: $color--text-gray
+  margin: 6px 0

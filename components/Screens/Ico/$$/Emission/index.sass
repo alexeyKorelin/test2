@@ -1,0 +1,107 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+  margin-top: 10px
+  background-image: url(https://cdn.mentalmarket.io/ico/emission/mntl-rounds-2.svg)
+  background-repeat: no-repeat
+  background-position: top center
+  padding-top: 260px
+
+.light
+  min-width: 1170px
+  height: 600px
+
+  &__mntl
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 68px
+    transform: translate(-50%,0)
+    animation-name: mntl
+    animation-iteration-count: infinite
+    animation-timing-function: ease-in-out
+    animation-duration: 14s
+
+  &__circles
+    position: relative
+    height: 600px
+    overflow: hidden
+    user-select: none
+
+  &__inner
+    position: absolute
+    top: 0
+    width: 2600px
+    left: 50%
+    transform: translate(-50%,0)
+
+  &__circle
+    transform: perspective(100px) rotateX(5deg)
+
+.caps
+  display: flex
+  justify-content: center
+  margin-top: 40px
+
+  &__cap
+    &:not(:last-child)
+      margin-right: 50px
+
+  &__icon
+    margin-left: 5px
+
+.items
+  margin-top: 50px
+
+.card
+  opacity: 0
+  position: absolute
+  width: 100%
+  z-index: 2
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-width: 0
+  max-height: 0
+  overflow: hidden
+  transition: opacity .3s, max-height 0s .3s, max-width 0s .3s 
+  
+  &__icon
+    margin-left: 5px
+
+.round
+  position: absolute
+
+.item
+  position: relative
+  height: 268px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:hover
+    .card
+      opacity: 1
+      max-width: 900px
+      max-height: 900px
+      transition: opacity .3s, max-height 0s, max-width 0s
+
+.texts
+  display: flex
+  margin-top: 75px
+
+.text
+  display: flex
+
+  &:not(:first-child)
+    margin-left: auto
+
+  &__description
+    width: 390px
+    color: #E5D8FF
+    font-size: 14px
+    line-height: 22px
+    margin-left: 20px
+
+  

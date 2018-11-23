@@ -1,0 +1,166 @@
+@import styles/config.sass
+
+.root
+  $root: &
+
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow-y: scroll
+  overflow-x: auto
+  z-index: 10000
+  background-color: rgba(252, 252, 252, 0.9)
+  visibility: visible
+  font-family: $font--istok_web
+  padding-top: 10px
+  padding-bottom: 10px
+  text-align: center
+
+  // kinds
+  &_default
+    .popup
+      width: 470px
+
+  &_tight
+    .popup
+      min-height: 470px
+      width: 400px
+  
+  &_shop
+    .popup
+      width: 666px
+
+  &_ico
+    width: 470px
+
+  // color
+  &_white
+    color: $color--text
+
+    .close
+      color: $color--text
+
+    .popup
+      background: #fff
+
+  &_gradient
+    color: #fff
+
+    .close
+      color: #fff
+
+    .popup
+      color: #fff
+      background: linear-gradient(71.2deg, #7C10FF 1.17%, #A95CFF 96.49%)
+
+  &_gradient-pattern
+    .close
+      color: #fff
+
+    .popup
+      background: url(https://cdn.mentalmarket.io/assets/modal-coins-pattern.png), linear-gradient(45deg, rgb(124, 16, 255) -30%, rgb(169, 92, 255) 50%)
+
+  &_icoPink
+    background: rgba(0,0,0,.5)
+
+    .close
+      color: #fff
+      top: 30px
+      right: 30px
+
+    .popup
+      border-radius: 30px
+      background: linear-gradient(0deg, #8D00FF -7.11%, #F37DCB 152.19%)
+      box-shadow: 0px 1px 8px rgba(53, 16, 87, 0.408939)
+      padding-bottom: 60px
+
+  //sizes
+  &_sm
+    padding-left: 10px
+    padding-right: 10px
+
+    .popup
+      width: 320px
+      height: initial
+      min-height: auto
+      padding-bottom: 65px
+
+    @media screen and (max-width: 600px)  
+      .popup
+        max-width: 100%
+        padding-left: 15px
+        padding-right: 15px
+
+  &_sm-fullsize
+    padding-top: 0
+    padding-bottom: 0
+
+    .popup      
+      max-width: 100%
+      height: 100%
+      width: 100%
+      padding-left: 15px
+      padding-right: 15px
+
+    @media screen and (min-width: 600px)  
+      padding-top: 10px
+      padding-bottom: 10px
+
+      .popup
+        width: 320px
+        height: initial
+        min-height: auto
+        padding-bottom: 65px
+        padding-left: 15px
+        padding-right: 15px
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+
+.table
+  display: table
+  table-layout: fixed
+  width: 100%
+  height: 100%
+
+.cell
+  display: table-cell
+  vertical-align: middle
+
+.popup
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  display: inline-block
+  box-sizing: border-box
+  min-height: 200px
+  padding: 68px 34px 30px
+  border-radius: $border-radius--main
+  text-align: center
+  box-shadow: 0 4px 20px 0 #E1E8EE
+  transition: background-color 0.3s
+
+.close
+  position: absolute
+  top: 19px
+  right: 19px
+  z-index: 1002
+  background: transparent
+  width: 24px
+  height: 24px
+  padding: 0
+  border: none
+  outline: none
+  cursor: pointer
+
+  &__icon
+    line-height: 21px
+    font-size: 21px

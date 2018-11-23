@@ -1,0 +1,35 @@
+@import 'styles/config.sass'
+
+.radioButton
+  margin-bottom: 9px
+
+  &:last-child
+    margin-bottom: 0
+
+.more
+  $root: &
+
+  &_open
+    #{$root}__hidden
+      max-height: 999px
+      opacity: 1
+      transition: opacity 0.3s, max-height 1s
+
+  &__button
+    color: $color--text-blue
+    font-size: 14px
+    line-height: 16px
+    border: none
+    background: transparent
+    padding: 0
+    cursor: pointer
+    margin-top: 16px
+
+  &__hidden
+    max-height: 0
+    opacity: 0
+    overflow: hidden
+    transition: opacity 0.3s, max-height 0.3s 
+
+    .radioButton:first-child
+      margin-top: 9px

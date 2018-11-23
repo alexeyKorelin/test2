@@ -1,0 +1,77 @@
+@import 'styles/config.sass'
+
+.root
+  margin-bottom: 11px
+
+  &_error
+    .textarea
+      border-color: $color--text-red
+    .description
+      color: $color--text-red
+    .count
+      color: $color--text-red
+
+  &_user
+    font-family: $font--istok_web
+    margin-top: 20px
+    margin-bottom: 10px
+    padding-left: 15px
+    padding-right: 15px
+
+    .textarea
+      border-radius: 2px
+      color: $color--text-gray
+      font-size: 12px
+      line-height: 15px
+      height: 50px
+      box-sizing: border-box
+      padding-top: 10px
+
+.info
+  margin-bottom: 5px
+  display: flex
+
+.center
+  margin-left: auto
+  margin-right: auto
+  margin-top: 6px
+
+.title
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  color: $color--text
+  transition: color 0.3s
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+
+.count
+  color: $color--text-gray
+  font-size: 12px
+  font-weight: bold
+  margin-left: auto
+
+.textarea
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 0
+  background-color: #fff
+  font-size: 14px
+  line-height: 21px
+  color: $color--text
+  display: block
+  width: 100%
+  text-align: center
+  padding: 3px 10px
+  transition: border-color 0.3s, box-shadow 0.3s
+  resize: none
+  font-family:  $font--roboto
+
+  &::placeholder
+    color: $color--text-gray

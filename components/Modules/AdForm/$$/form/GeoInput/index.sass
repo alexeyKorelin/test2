@@ -1,0 +1,96 @@
+@import 'styles/config.sass'
+
+.root
+  margin-bottom: 11px
+
+  &_error
+    .description, .count
+      color: $color--text-red
+
+    .input
+      border-color: $color--text-red
+
+.info
+  margin-bottom: 5px
+  display: flex
+
+.title
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  color: $color--text
+  transition: color 0.3s
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+.count
+  color: $color--text-gray
+  font-size: 12px
+  font-weight: bold
+  margin-left: auto
+
+.input
+  height: 50px
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  background-color: #fff
+  font-size: 18px
+  line-height: 21px
+  color: $color--text
+  display: block
+  width: 100%
+  text-align: left
+  padding: 13px 19px 14px
+  transition: border-color 0.3s, box-shadow 0.3s
+
+  &:focus
+    border-color: rgba(88, 0, 255, 0.1011)
+    box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+  &::placeholder
+    color: $color--text-gray
+
+.suggest
+  position: relative
+
+.suggests
+  color: $color--text
+  position: absolute
+  margin: 5px 0 0
+  padding: 0
+  list-style: none
+  z-index: 1
+  background: transparent
+  width: 100%
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  max-height: 210px
+  overflow: auto
+
+  &_hidden
+    max-height: 0
+    border: none
+
+.suggestItem
+  background-color: #fff
+  transition: background-color 0.3s
+  cursor: pointer
+  font-size: 18px
+  line-height: 21px
+  padding: 13px 19px 14px 19px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+  &:hover, &_active
+    background-color: #f8f9fb

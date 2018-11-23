@@ -1,0 +1,102 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/currencies/xrp.png)
+    position: absolute    
+    bottom: -31px
+    left: -12px
+
+.description
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  color: #fff
+
+.items
+  margin-top: 35px
+
+.image
+  &__img
+    display: inline-block !important
+
+.item
+  text-align: center
+  padding-left: 15px
+  padding-right: 15px
+  box-sizing: border-box
+
+  &__image
+    text-align: center
+
+  &__title
+    margin-top: 18px
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: #FFEFF6
+
+  &__description
+    font-size: 12px
+    line-height: 16px
+    color: #E5D8FF
+    margin-top: 10px
+
+.image
+  height: 90px
+
+.root [class~='slick-dots']
+  list-style: none
+  margin: 19px 0 0
+  padding: 0
+  text-align: center
+
+  li
+    width: 11px
+    height: 11px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+
+    &:not(:last-child)
+      margin-right: 1px
+
+.page
+  width: 7px 
+  height: 7px
+  box-sizing: border-box
+  border-radius: 50%
+  border: 1px solid #b02bee
+  padding: 0
+  display: block
+  position: relative
+  z-index: 1
+  overflow: hidden
+  transition: all .3s
+
+  &:after
+    content: ''
+    z-index: -1
+    background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 174.05%)
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    transition: all .3s
+
+.root [class~='slick-active']
+  .page
+    width: 11px
+    height: 11px
+    border: 1px solid transparent
+
+    &:after
+      opacity: 1
+
+
+
+  

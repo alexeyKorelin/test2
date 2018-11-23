@@ -1,0 +1,29 @@
+.gallerySlider.slick-slider 
+{
+  height: 228px
+}
+.gallerySlider .slick-list 
+{
+  border-radius: 2px;
+  overflow: hidden;
+}
+.gallerySlider .slick-dots {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 9px;
+  left: 0;
+  right: 0;
+}
+.gallerySlider .slick-dots li {
+  text-align: center;
+  display: inline-block;
+}
+.gallerySlider .slick-dots li:not(:last-child) {
+  margin-right: 3px;
+}

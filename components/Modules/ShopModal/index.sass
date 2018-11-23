@@ -1,0 +1,47 @@
+@import 'styles/config.sass'
+
+.root
+  padding: 12px 20px 40px 20px
+  width: 666px
+
+.h2_mobile
+  text-align: left
+
+.input
+  height: 50px
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  background-color: $color--text-white
+  font-size: 18px
+  line-height: 21px
+  color: $color--text
+  display: block
+  width: 100%
+  text-align: left
+  padding: 13px 19px 14px
+  transition: border-color 0.3s, box-shadow 0.3s
+
+  &:focus
+    border-color: rgba(88, 0, 255, 0.1011)
+    box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+  &::placeholder
+    color: $color--text-gray
+
+.success
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 30px
+  h2
+    color: $color--text-white
+  &_icon
+    svg
+      transform: rotate(180deg)
+      path
+        fill: $color--text-white
+  &_description
+    color: $color--text-white
+    margin: 0 0 30px 0

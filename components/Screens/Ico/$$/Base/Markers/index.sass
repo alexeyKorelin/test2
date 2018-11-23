@@ -1,0 +1,106 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+  
+  display: flex
+  margin-left: auto
+  margin-right: auto
+  justify-content: space-between
+  margin-top: 31px
+  background-image: url(https://cdn.mentalmarket.io/ico/main/line.svg)
+  background-position: center center
+
+  &_default
+    background-repeat: no-repeat
+    background-size: 100% auto
+
+  &_sm
+    background-repeat: repeat no-repeat
+
+.marker
+  $root: &
+
+  width: 14px
+  height: 14px
+  position: relative
+
+  &__title
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    color: #E5D8FF
+    white-space: nowrap
+    position: absolute
+    left: 50%
+    transform: translate(-50%,0)
+    top: -31px
+
+  &__marker
+    border-radius: 50%
+    background: linear-gradient(0deg, #8D00FF 50%, #F37DCB 228.09%)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 14px
+    height: 14px
+    z-index: 1
+
+  &_active
+    #{$root}__marker
+      width: 18px
+      height: 18px
+      background: linear-gradient(0deg, #8D00FF -158.5%, #F37DCB 50%)
+      animation-name: active 
+      animation-duration: 1.5s 
+      animation-iteration-count: infinite
+      z-index: 1
+
+    &:before
+      content: ''
+      width: 18px
+      height: 18px
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      position: absolute
+      background: #F37DCB
+      border-radius: 50%
+      animation-name: activeCover 
+      animation-duration: 1.5s 
+      animation-iteration-count: infinite
+      z-index: 1
+
+@keyframes active
+  0%, 100%
+    width: 18px
+    height: 18px
+  
+  50%
+    width: 22px
+    height: 22px 
+
+@keyframes activeCover
+  0%
+    width: 18px
+    height: 18px
+    opacity: 0
+  15% 
+    width: 22px
+    height: 22px
+    opacity: 0
+  60% 
+    opacity: .3
+    width: 28px
+    height: 28px
+  97% 
+    opacity: 0
+  99% 
+    width: 30px
+    height: 30px
+    opacity: 0
+  100%
+    width: 18px
+    height: 18px
+    opacity: .3        

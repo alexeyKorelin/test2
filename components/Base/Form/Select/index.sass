@@ -1,0 +1,139 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+  margin-bottom: 11px
+
+  &_error
+    .selected
+      border-color: $color--text-red
+
+  &_open
+    .selected
+      border-color: rgba(88, 0, 255, 0.1011)
+      box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+      &:after
+        transform: rotate(180deg)
+
+    .dropdown
+      max-height: 217px
+      border-left: 1px solid #E1E8EE
+      border-bottom: 1px solid #E1E8EE
+      border-right: 1px solid #E1E8EE
+      border-radius: 0 0 4px 4px
+      transition: max-height 0.3s
+
+    .ul
+      opacity: 1
+
+.info
+  margin-bottom: 5px
+  display: flex
+
+.title
+  font-size: 12px
+  font-weight: bold
+  color: $color--text
+  line-height: 16px
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+  &_error
+    color: $color--text-red
+
+.control
+  height: 50px
+  width: 100%
+  position: relative
+
+.selected
+  height: 50px
+  box-sizing: border-box
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  background-color: #fff
+  font-size: 18px
+  line-height: 21px
+  color: $color--text
+  display: block
+  width: 100%
+  text-align: left
+  padding: 13px 35px 14px 19px
+  position: relative
+  cursor: pointer
+  transition: border-color 0.3s, box-shadow 0.3s, color 0.3s
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-top: 4px solid $color--text
+    border-right: 3px solid transparent
+    border-bottom: 0
+    border-left: 3px solid transparent
+    top: 23px
+    right: 20px
+    position: absolute
+    transition: transform 0.3s, border-color 0.3s
+
+  &_default
+    color: $color--text-gray
+
+.dropdown
+  top: 46px
+  max-height: 0
+  overflow: hidden
+  position: absolute
+  width: 100%
+  z-index: 2
+  border-left: 1px solid transparent
+  border-bottom: 1px solid transparent
+  border-right: 1px solid transparent
+  transition: max-height 0.3s, border 0.3s
+  background: transparent
+  box-sizing: border-box
+
+  &Inner
+    margin-top: 9px
+    overflow: hidden
+    background: #fff
+    max-height: 212px
+
+.ul
+  max-height: 205px
+  padding: 0
+  margin: 0
+  list-style: none
+  background: #fff
+  opacity: 0
+  transition: 0.5s
+  overflow: auto
+
+.li
+  background-color: #fff
+  transition: background-color 0.3s
+  cursor: pointer
+  font-size: 18px
+  line-height: 21px
+  padding: 13px 19px 14px 19px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+  &_disabled
+    color: $color--text-gray
+    cursor: default
+    background-color: transparent
+
+  &:not(&_disabled):hover, &_active
+    background-color: rgba(225, 232, 238, 0.23)

@@ -1,0 +1,83 @@
+@import 'styles/config.sass'
+
+.channelBanner
+  margin-top: 33px
+
+.topHeader
+  margin-bottom: 5px
+
+.cardsContainer
+  overflow: hidden
+  margin-left: -10px
+  margin-right: -10px
+
+.cards
+  overflow-y: hidden
+  overflow-x: scroll
+  margin-bottom: 5px
+  padding-bottom: 50px
+  margin-bottom: -50px
+  -webkit-overflow-scrolling: touch
+
+  &__inner
+    display: inline-flex
+    padding: 10px 0
+
+  &__card
+    width: 240px
+    height: 200px
+    display: inline-block
+    position: relative
+    text-decoration: none
+    margin-right: 10px
+
+    &:first-child
+      margin-left: 10px
+
+  &__image
+    height: 136px
+    background-size: cover
+    background-position: center
+    box-shadow: 0px 1px 7px #E1E8EE
+    border-radius: 8px
+
+  &__price
+    font-size: 18px
+    font-weight: 500
+    color: $color--text-dark-gray
+    padding-top: 10px
+    padding-bottom: 4px
+
+  &__category
+    color: #fff
+    background: #B678FF
+    border-radius: 10px
+    position: absolute
+    top: 10px
+    left: 10px
+    font-size: 10px
+    padding: 2px 6px
+
+  &__title
+    font-size: 14px
+    line-height: 22px
+    color: $color--text-gray
+
+
+@media screen and (min-width: 600px)
+  .topHeader
+    font-size: 36px
+    margin: 15px 0 25px 0
+  .bottomHeader
+    font-size: 36px
+    margin: 25px 0
+  .cards
+    &__card
+      width: 330px
+      height: 260px
+    &__image
+      height: 190px
+    &__price
+      font-size: 24px
+    &__title
+      font-size: 18px

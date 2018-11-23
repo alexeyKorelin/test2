@@ -1,0 +1,246 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/currencies/dash.png)
+    position: absolute
+    top: -90px
+    right: -5px
+
+.description
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  color: #FFEFF6
+  padding-left: 35px
+  padding-right: 35px
+
+.links
+  text-align: center
+  margin-top: 20px
+
+  &__link
+    font-size: 14px
+    text-transform: uppercase
+    color: #FFBCEF
+    line-height: 20px
+    text-decoration: none
+
+    &:not(:last-child)
+      margin-right: 30px
+
+.roadmap
+  margin-top: 30px
+  position: relative
+
+  &__bush
+    position: absolute
+    z-index: 2
+
+    &_left
+      left: -57px
+      top: -175px
+      height: 241px
+
+    &_right
+      right: -53px
+      height: 244px
+      bottom: 150px
+
+  &__content
+    display: inline-block
+
+  &__inner
+    padding-left: 15px
+    padding-right: 15px
+
+  &__months
+    display: flex
+    flex-wrap: nowrap
+
+    &_odd
+      margin-left: 145px
+
+      .month
+        &__marker
+          top: -2px
+          transform: translate(0,-50%)
+
+        &__vline
+          transform: rotate(180deg)
+          bottom: 0
+
+    &_even
+      .month
+        &__marker
+          bottom: -2px
+          transform: translate(0,50%)
+
+  &__line
+    height: 4px
+    background: #fff
+    margin-left: 50px
+    margin-right: 245px
+    border-radius: 2px
+
+.month
+  $root: &
+
+  width: 290px
+  flex-shrink: 0
+  box-sizing: border-box
+  z-index: 1
+  position: relative
+  display: flex
+  flex-direction: column
+  transition: .85s
+
+  &_already
+    #{$root}
+      &__marker
+        background: #8016ff
+
+  &_active
+    #{$root}
+      &__marker
+        background: radial-gradient(18.46px at 50.1% 50%, #F37DCB 0%, #8D00FF 100%)
+
+        &:before
+          content: ''
+          width: 22px
+          height: 22px
+          background: radial-gradient(21.53px at 50.1% 50%, #F37DCB 0%, #8D00FF 100%)
+          filter: blur(27.1828px)
+          z-index: 1
+          top: 0
+          left: 0
+          display: block
+          transform: translate(-50%,-50%)
+
+      &__info
+        box-shadow: 0px 1px 10px rgba(229, 216, 255, 0.250991)
+
+        &:after
+          opacity: 1
+
+        #{$root}
+          &__title
+            color: #E5D8FF
+
+          &__paragraph
+            color: #fff
+
+      &__title
+        color: #F37DCB
+
+      &__paragraph
+        color: #FFBCEF
+
+  &_invisible
+    opacity: .2
+
+  &__info
+    flex-shrink: 0
+    border-radius: 10px
+    position: relative
+    box-shadow: 0px 1px 10px rgba(229, 216, 255, 0)
+    padding: 20px 15px 20px 28px
+    transition: all .3s
+
+    &:after
+      content: ''
+      background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+      opacity: 0
+      z-index: -1
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      border-radius: 10px
+      transition: all .3s
+
+  &__title
+    font-weight: bold
+    font-size: 16px
+    line-height: 23px
+    color: #E5D8FF
+
+  &__description
+    list-style: none
+    margin: 5px 0 0
+    padding: 0
+
+  &__paragraph
+    font-size: 12px
+    line-height: 17px
+    color: #CCABEA
+    position: relative
+    transition: all .3s
+
+    &:not(:last-child)
+      margin-bottom: 5px
+
+    &:before
+      content: url(https://cdn.mentalmarket.io/ico/roadmap/triangle.svg)
+      position: absolute
+      left: -7px
+      top: -2px
+
+  &__line
+    min-height: 50px
+    width: 100%
+    flex-grow: 1
+    flex-shrink: 0
+    overflow: hidden
+    position: relative
+
+  &__vline
+    position: absolute
+    z-index: -1
+    left: 43px
+
+  &__marker
+    width: 18px
+    height: 18px
+    border-radius: 50%
+    position: absolute
+    left: 35px
+    background: #DCDCDC
+
+.arrows
+  display: flex
+  justify-content: center
+  position: relative
+  margin-top: 30px
+
+.arrow
+  width: 42px
+  height: 42px
+  padding: 0
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  background-position: center center
+  opacity: 1
+  transition: all .3s
+
+  &:disabled
+    opacity: 0
+    cursor: default
+
+  &:not(:last-child)
+    margin-right: 18px
+
+  &_left
+    background-image: url(https://cdn.mentalmarket.io/ico/roadmap/arrow-left.svg)
+
+  &_right
+    background-image: url(https://cdn.mentalmarket.io/ico/roadmap/arrow-right.svg)
+
+.scrollbarContainer
+  display: none   
+
+.scrollbar
+  display: none 

@@ -1,0 +1,244 @@
+@import 'styles/config.sass'
+
+.root
+  height: 305px
+  opacity: 0
+  transition: all 0.3s
+
+  .roadPath
+    stroke-dasharray: 200%
+    stroke-dashoffset: 200%
+    transition: all 4s linear   
+
+  &_active
+    opacity: 1
+
+    .roadPath
+      stroke-dashoffset: 0
+
+.inner
+  width: 1200px
+  box-sizing: border-box
+  padding-left: 10px
+  padding-right: 10px
+  position: relative
+  margin-left: auto
+  margin-right: auto  
+
+.info
+  padding: 11px 17px 12px
+  box-shadow: 0px 1px 10px rgba(210, 204, 255, 0)
+  border-radius: 4px
+  transition: box-shadow 0.3s, background 0.3s, transform 0.3s, z-index 0s
+
+.month
+  position: absolute
+  opacity: 0
+  background: transparent
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 0
+  transition: all 0.3s
+
+  &_active:hover
+    opacity: 1
+    z-index: 1
+
+    .info
+      transform: scale(1.15, 1.15)
+      background: #fff
+      box-shadow: 0px 1px 10px rgba(210, 204, 255, 0.3)
+
+    .title
+      color: $color--text-blue  
+      
+    .description
+
+    .li
+      color: $color--text
+
+  &_odd
+    margin-top: 10px
+
+  &_even
+    margin-top: -10px  
+
+  &_active
+    opacity: 0.7
+    margin-top: 0
+
+  &_current
+    opacity: 1
+
+    .title
+      color: $color--text-blue
+      font-size: 18px
+      line-height: 21px  
+
+    .description
+      margin-top: 14px
+
+    .li
+      color: $color--text
+      font-size: 12px
+      line-height: 14px
+      padding-left: 11px
+ 
+      &:not(:last-child)
+        margin-bottom: 6px
+
+      &:before
+        width: 7px
+        height: 10px
+        top: 2px
+
+.title  
+  color: $color--text
+  font-size: 16px
+  line-height: 19px
+  font-weight: bold
+  transition: all 0.3s
+
+.description
+  margin-top: 4px
+  transition: all 0.3s
+  
+.radialGradient
+  &_active
+    .circleStop
+      &0
+        stop-color: #A16FFF  
+
+      &1 
+        stop-color: #5800FF 
+
+  &_current
+    .circleStop
+      &0
+        stop-color: #D9C5FF
+
+      &1
+        stop-color: #5800FF           
+
+.circleStop
+  transition: all 0.3s
+
+  &0
+    stop-color: #E3E3E3
+
+  &1  
+    stop-color: #C4C4C4
+
+.lineGradient
+  $root: &
+
+  #{$root}__0
+    stop-color: #D8D8D8
+      
+  #{$root}__1
+    stop-color: #fff
+
+  &_active
+    #{$root}__0
+      stop-color: $color--text-blue
+
+.line
+  opacity: 0
+  height: 0
+  transition: all 0.5s 0.3s
+
+  &_active
+    opacity: 1
+    height: 100%
+
+.ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+.li
+  padding: 0 0 0 9px
+  font-size: 10px
+  line-height: 12px
+  color: $color--text-gray
+  position: relative
+  transition: all 0.3s
+
+  &:not(:last-child)
+    margin-bottom: 6px
+
+  &:before
+    content: ''
+    background-image: url(https://cdn.mentalmarket.io/landing/small-mental-triangle.svg)
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    background-position: center bottom
+    position: absolute
+    top: 3px
+    left: 0
+    width: 5px
+    height: 6px
+    transition: all 0.3s
+
+.circle   
+  r: 8.5
+  opacity: 0
+  transition: all 0.2s
+
+  &_active
+    opacity: 1
+    animation-name: circleActive
+    animation-duration: 0.55s
+
+  &_current  
+    opacity: 1
+    animation: currentCircleActive 1.5s infinite
+
+@keyframes circleActive
+  0%
+    r: 8.5
+  20%
+    r: 8.5
+  50% 
+    r: 10.5
+  100% 
+    r: 8.5  
+
+@keyframes currentCircleActive
+  0%
+    r: 8.5
+  50% 
+    r: 9.5
+  100% 
+    r: 8.5    
+
+.shadow
+  r: 8.5
+  opacity: 0
+  transition: all 0.2s
+
+  &_current  
+    opacity: 0.23
+    animation: currentShadow 1.5s infinite
+
+@keyframes currentShadow
+  0%
+    r: 8.5
+    opacity: 0
+  15%
+    r: 9
+    opacity: 0
+  60% 
+    opacity: 0.23
+    r: 12.5
+  97%
+    opacity: 0
+  99%
+    r: 13
+    opacity: 0  
+  100% 
+    r: 8.5    
+    opacity: 0.23 
+
+    

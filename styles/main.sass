@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web:400,700|Roboto:400,500,700&subset=cyrillic,cyrillic-ext');
+@import 'styles/config.sass'
+
+html
+  min-height: 100%
+  position: relative
+
+body
+  margin: 0
+  font-family: $font--roboto
+  background: #FBFBFB
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  *
+    outline: none
+
+[class^="overflow-hidden"]
+  overflow: hidden
+
+input, textarea
+  font-family: $font--roboto
+  color: $color--text
+  -webkit-appearance: none
+
+button
+  font-family: $font--istok_web
+  border: 0
+  background: none
+  cursor: pointer
+
+h1
+  font-size: 36px
+  font-weight: bold
+  color: $color--text
+  margin: 0 0 16px 0
+  padding: 0
+
+h2
+  font-size: 24px
+  font-weight: bold
+  color: $color--text
+  margin: 0 0 19px 0
+  padding: 0
+
+h3
+  font-size: 18px
+  font-weight: bold
+  color: $color--text
+  margin: 0 0 15px 0
+  padding: 0
+
+p
+  font-size: 16px
+  font-weight: normal
+  color: $color--text-paragraph
+  padding: 0
+
+small
+  font-size: 12px
+  margin: 0
+  color: $color--text-gray
+  font-weight: normal
+
+@media screen and (min-width: 600px) and (max-width: 1024px)
+  h2
+    font-size: 36px

@@ -1,0 +1,48 @@
+@import 'styles/config.sass'
+
+.root
+  border: none
+  outline: none
+  cursor: pointer 
+  padding: 0
+  width: 30px
+  height: 30px
+  background-image: $gradient--main
+  border-radius: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:hover
+    .heartStyles
+      fill: #fff
+
+  &_active
+    .icon
+      animation-name: like
+      animation-duration: 0.45s
+
+    .heartStyles
+      fill: #fff
+
+  &_transparent:hover
+    .heartStyles
+      fill: transparent
+
+
+.icon
+  width: 18px
+  margin-bottom: -1px
+
+.heartStyles
+  fill: transparent
+  stroke: #fff
+  transition: all 0.3s
+
+@keyframes like
+  0%
+    width: 18px
+  50%
+    width: 26px
+  100%
+    width: 18px

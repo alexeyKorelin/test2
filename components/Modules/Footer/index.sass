@@ -1,0 +1,49 @@
+@import 'styles/config'
+
+.root
+  width: 100%
+  background: #fff
+  box-shadow: $box-shadow
+  display: flex
+  height: 100px
+  position: absolute
+  bottom: 0  
+  min-width: 1170px
+  align-items: center
+  font-family: $font--istok_web
+
+.container
+  display: flex
+  font-size: 12px
+  line-height: 16px
+  color: $color--text-gray
+  font-weight: bold
+
+.copy
+  margin-right: 25px
+  opacity: 0.67
+
+.links
+  display: flex
+
+.link
+  color: $color--text-gray
+  text-decoration: none
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.02em
+
+  &:hover
+    text-decoration: underline
+
+  &:not(:last-child)
+    margin-right: 15px
+
+.connectWithUs
+  margin-left: auto
+  a
+    color: $color--text-purple
+    display: flex
+  i
+    color: $color--text-purple
+    padding-left: 10px

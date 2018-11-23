@@ -1,0 +1,124 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+  align-items: center
+
+.username
+  border: none
+  background: transparent
+  outline: none
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  text-decoration: underline
+  font-weight: bold
+  padding: 0
+  vertical-align: middle
+  margin-right: 5px
+  cursor: pointer
+  letter-spacing: 0.02em
+  font-family: $font--istok_web
+
+.more
+  display: inline-block
+  position: relative
+
+.moreButton
+  background: none
+  border: none
+  outline: none
+  cursor: pointer
+  padding: 5px
+  line-height: 50px
+
+.imageContainer
+  display: inline-block
+  vertical-align: middle
+
+.moreIcon
+  margin-left: 7px
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  margin-top: -3px
+
+.authButton
+  background: transparent
+  border: none
+  padding: 0
+  outline: none
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.02em
+  color: $color--text-gray
+  font-weight: bold
+  cursor: pointer
+  text-decoration: underline
+  flex-shrink: 0
+  text-align: right
+  font-family: $font--istok_web
+
+.dropdown
+  box-shadow: 0 1px 7px rgba(162, 162, 162, 0.3)
+  background: #fff
+  border-radius: $border-radius--main
+  z-index: 4
+  position: absolute
+  right: 0
+  color: $color--text
+  top: 100%
+  overflow: visible
+  margin-top: 5px
+  width: 246px
+
+  .ul
+    max-width: 9999px
+    max-height: 9999px
+    padding: 52px 44px 41px
+    transition: max-width 0s, max-height 0s, padding 0s
+
+.ul
+  max-width: 0
+  max-height: 0
+  padding: 0
+  transition: max-width 0s 0.3s, max-height 0s 0.3s, padding 0s 0.3s
+  line-height: initial
+  margin: 0
+  list-style: none
+  overflow: hidden
+  font-family: $font--istok_web
+
+.li
+  margin-bottom: 39px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  transition: all 0.3s
+
+  &:last-child
+    margin-bottom: 0
+
+  &_active
+    color: $color--text-blue
+    font-weight: bold
+
+    .a
+      color: $color--text-blue
+      font-weight: bold
+
+  &_exit
+    .a
+      color: $color--text-gray
+
+.a
+  color: $color--text
+  text-decoration: none
+  cursor: pointer
+  border: none
+  background-color: transparent
+  padding: 0
+  font-size: 16px
+
+.number
+  margin-left: 6px

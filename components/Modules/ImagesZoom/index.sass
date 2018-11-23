@@ -1,0 +1,171 @@
+@import 'styles/config.sass'
+@import 'slick-carousel/slick/slick.css'
+@import './imagesZoom.css'
+
+.root
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10000
+  overflow: hidden
+
+  &_single
+    .top
+      margin-bottom: 23px
+
+  &_sm
+    .close
+      top: 10px
+      right: 10px
+      font-size: 21px
+      line-height: 21px
+      
+    .top
+      margin-top: 43px
+
+    .pagesCount
+      font-size: 10px
+      line-height: 14px
+
+    .pages
+      margin-bottom: 10px
+
+    .page
+      width: 42px
+      height: 42px
+
+      &:not(:last-child)
+        margin-right: 5px
+
+    .arrow
+      &_left
+        left: 15px
+
+      &_right
+        right: 15px    
+
+.overlay
+  position: absolute
+  top: -10px
+  right: -10px
+  bottom: -10px
+  left: -10px
+  background: black
+  opacity: .78
+  background-size: cover
+  background-position: center
+  transition: all 0.7s
+
+.backdrop
+  position: absolute
+  top: -10px
+  right: -10px
+  bottom: -10px
+  left: -10px
+
+.close
+  position: absolute
+  color: #fff
+  top: 20px
+  right: 20px  
+  cursor: pointer
+  font-size: 29px
+  line-height: 29px
+  z-index: 2
+  padding: 0
+
+.content
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 1
+  display: flex
+  flex-direction: column
+
+.top
+  margin-top: 60px
+  margin-bottom: 13px
+  flex-grow: 1
+  overflow: hidden
+
+.slide
+  &__inner
+    margin-left: auto
+    margin-right: auto  
+    align-items: center
+    justify-content: center
+    display: flex  
+    position: relative
+
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+.loader
+  position: relative
+  width: 100px
+  height: 100px
+
+.arrow
+  top: 50%
+  position: absolute
+  z-index: 3
+  transform: translateY(-50%)
+
+  &_left
+    left: 20px
+
+  &_right
+    right: 20px
+
+.bottom
+  flex-shrink: 0
+
+.pagesCount
+  font-family: $font--istok_web
+  text-align: center
+  color: #fff
+  font-weight: bold
+  font-size: 14px
+  line-height: 20px  
+
+.pages
+  margin-top: 13px
+  margin-bottom: 18px
+  display: flex
+  justify-content: center
+
+.page
+  width: 84px
+  height: 84px
+  background-position: center
+  padding: 0
+  cursor: pointer
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  position: relative
+  transition: all 0.3s
+
+  &:not(:last-child)
+    margin-right: 10px
+
+  &_active, &:hover
+    opacity: 0.33 
+
+  &__image
+    background-size: cover
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+

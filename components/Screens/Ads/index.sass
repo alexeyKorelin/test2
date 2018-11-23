@@ -1,0 +1,91 @@
+@import 'styles/config.sass'
+
+.top
+  position: relative
+
+.h1
+  margin-bottom: 20px
+
+  &_seeAll
+    padding-right: 110px
+
+  .count
+    font-family: $font--istok_web
+    font-size: 24px
+    line-height: 43px
+    margin-left: 13px
+    color: $color--main
+
+    &_zero
+      color: $color--text-gray
+
+.statuses
+  margin-bottom: 5px
+
+.seeAll
+  position: absolute
+  font-size: 12px
+  color: #9B9B9B
+  font-weight: bold
+  text-decoration: none
+  background: transparent
+  border: none
+  padding: 0
+  display: block
+  cursor: pointer
+  outline: none
+  top: 0
+  right: 0
+
+  &:after
+    display: inline-block
+    width: 0
+    height: 0
+    content: ''
+    border-top: 4px solid
+    border-right: 3px solid transparent
+    border-bottom: 0
+    border-left: 3px solid transparent
+    margin-left: 3px
+    vertical-align: middle
+
+.status
+  margin-right: 6px
+  display: inline-flex
+  border: 1px solid
+  border-radius: 100px
+  box-shadow: 0 1px 7px 1px rgba(183,155,218,0.19)
+  padding: 1px 10px
+  font-family: $font--istok_web
+  font-size: 12px
+  font-weight: bold
+  cursor: pointer
+  background-color: #fff
+  &.all
+    border-color: #000
+    color: #000
+  &.moderation
+    border-color: #5800FF
+    color: #5800FF
+  &.archived
+    border-color: #9B9B9B
+    color: #9B9B9B
+  &.denied
+    border-color: #FF6578
+    color: #FF6578
+  &.blocked
+    border-color: #FF6578
+    color: #FF6578
+  &.deleted
+    border-color: #9B9B9B
+    color: #9B9B9B
+  &.draft
+    border-color: #8016FF
+    color: #8016FF
+  &.active
+    border-color: #50E3C2
+    color: #50E3C2
+  &.selected
+    border: none
+    box-shadow: none
+    text-decoration: underline

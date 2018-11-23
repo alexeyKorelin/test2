@@ -1,0 +1,42 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+  flex-wrap: wrap
+  color: $color--text-gray
+
+.point
+  display: inline-flex
+  align-items: center
+  margin-bottom: 5px
+
+  &:not(:last-child)
+    margin-right: 6px
+
+.value
+  font-size: 12px
+  line-height: 14px
+
+.icon
+  margin-right: 5px
+
+  &_date
+    font-size: 15px
+    margin-top: -4px
+
+  &_place
+    font-size: 15px
+    margin-top: -2px
+
+  &_mark
+    background: $color--text-purple
+    border-radius: 50%
+    color: #fff
+    display: inline-block
+    width: 13px
+    height: 13px
+    line-height: 11px
+    box-sizing: border-box
+    border: 1px solid $color--text-light-gray
+    font-size: 4px
+    text-align: center

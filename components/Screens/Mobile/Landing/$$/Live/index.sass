@@ -1,0 +1,65 @@
+@import 'styles/config.sass'
+
+.root
+  text-align: center
+  padding-top: 54px
+  padding-bottom: 109px
+  box-sizing: border-box
+
+.inlineBlock
+  display: inline-block
+  position: relative
+
+.h2
+  color: #fff
+  font-size: 36px
+  line-height: 46px
+
+.description
+  color: #fff 
+  font-size: 12px
+  line-height: 19px 
+  max-width: 530px
+  margin-left: auto
+  margin-right: auto
+
+.link
+  width: 230px
+  margin-top: 26px  
+
+.image
+  user-select: none
+  position: absolute
+  background-position: center
+  background-size: 100% auto
+  background-repeat: no-repeat
+
+  &_1
+    width: 72px
+    height: 77px
+    background-image: url(https://cdn.mentalmarket.io/landing/card-1-sm.png)
+    top: -78px
+    right: -14px
+
+    @media #{$retina}
+      background-image: url(https://cdn.mentalmarket.io/landing/card-1-sm@2x.png)
+
+  &_2  
+    width: 97px
+    height: 97px
+    background-image: url(https://cdn.mentalmarket.io/landing/card-2-sm.png)
+    bottom: -85px
+    left: -87px
+
+    @media #{$retina}
+      background-image: url(https://cdn.mentalmarket.io/landing/card-2-sm@2x.png)
+
+  &_3
+    width: 107px
+    height: 115px
+    background-image: url(https://cdn.mentalmarket.io/landing/card-3-sm.png)
+    bottom: -113px
+    right: -76px
+
+    @media #{$retina}
+      background-image: url(https://cdn.mentalmarket.io/landing/card-3-sm@2x.png)

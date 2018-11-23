@@ -1,0 +1,49 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  overflow: hidden
+  margin-left: -10px
+  margin-right: -10px
+
+  &_nowrap
+    .categories
+      display: inline-flex
+
+    #{$root}__inner
+      margin-bottom: -50px
+
+  &_wrap
+    .a
+      margin-bottom: 5px    
+
+    #{$root}__inner
+      overflow-x: auto
+      margin-bottom: -55px 
+
+  &__inner
+    overflow-y: hidden
+    overflow-x: scroll
+    padding-bottom: 50px 
+    -webkit-overflow-scrolling: touch
+
+.categories
+  padding: 15px 10px
+
+.a
+  text-decoration: none
+  display: inline-block
+
+  &:not(:last-child)
+    margin-right: 5px
+
+  &:hover, &_active
+    .bage
+      color: #fff
+
+
+.bage
+  white-space: nowrap
+  box-shadow: 0 1px 7px 1px rgba(183,155,218,0.19)
+  transition: all 0.3s

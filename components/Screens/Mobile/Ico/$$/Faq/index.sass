@@ -1,0 +1,93 @@
+@import 'styles/config.sass'
+
+.items
+  &__item
+    &:not(:last-child)
+      margin-bottom: 10px
+
+.item
+  $root: &
+
+  position: relative
+  z-index: 1
+  overflow: hidden
+  border-radius: 6px
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(23.24deg, #7C10FF 1.17%, #A95CFF 96.49%)
+    opacity: .86
+    z-index: -1
+    transition: .3s
+
+  &_active
+    &:after
+      opacity: .1365
+
+    #{$root}__caret
+      transform: rotate(180deg)
+
+    #{$root}__answer
+      max-height: 300px
+      transition: all .3s
+
+  &__answer
+    max-height: 0
+    overflow: hidden
+    box-sizing: border-box
+    transition: all .3s
+
+  &__caret
+    position: absolute
+    font-size: 6px
+    right: 10px
+    top: 14px
+    transition: .3s
+
+  &__toggler
+    color: #F8BDFF
+    font-size: 16px
+    line-height: 23px
+    font-weight: bold
+    border: none
+    background: transparent
+    display: block
+    width: 100%
+    text-align: left
+    padding: 15px 33px 13px 10px
+
+.answer
+  &__scrollarea
+    max-height: 300px
+
+  &__inner
+    padding: 10px 25px 20px 10px
+    color: #E5D8FF
+    font-size: 12px
+    line-height: 17px
+
+.scrollbarContainer
+  background: linear-gradient(180deg, rgba(141,0,255,.17) 6.98%, rgba(243,125,203,.17) 325.87%) !important
+  border-radius: 8px
+  width: 15px !important
+
+  .scrollbar
+    width: 15px !important
+    margin-left: 0 !important
+
+.scrollbar
+  border-radius: 8px
+  background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%) !important
+
+.controls
+  margin-top: 20px
+  text-align: center
+
+  &__btn
+    &:not(:last-child)
+      margin-right: 10px

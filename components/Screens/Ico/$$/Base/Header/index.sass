@@ -1,0 +1,267 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  height: 85px
+  width: 100%
+
+  &__inner
+    padding-top: 16px
+    box-sizing: border-box
+    height: 85px
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      background: linear-gradient(180deg, #1C0031 -65.45%, #9D14F6 479.36%)
+      opacity: 0
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      transition: all .3s
+
+  &_fixed
+    #{$root}__inner
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 4
+
+      &:after
+        opacity: 1
+
+    .buy
+      opacity: 1
+      max-width: 170px
+      transition: max-width .2s, opacity .2s .2s
+
+    .center
+      max-width: 270px
+      opacity: 1
+      transition: max-width .2s, opacity .2s .2s
+
+.content
+  display: flex
+  align-items: flex-start
+  max-width: 100%
+  width: 1170px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 10px
+  padding-right: 10px
+  box-sizing: border-box
+
+.burger
+  color: #fff
+  font-size: 21px
+  line-height: 21px
+  margin-top: 9px
+  margin-left: -5px
+  padding: 5px
+
+.menu
+  position: fixed
+  z-index: 10
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  overflow: hidden
+
+  &__inner
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+    &_1
+      z-index: 1
+      top: -10%
+      left: -10%
+      height: 120%
+      width: 120%
+      background: linear-gradient(354.58deg, #2F024D -27.16%, #3B0657 -17.08%, #5F176A -6.54%, #82287C -2.38%, #B84592 2.39%, #ED61A8 7.24%, #B74492 12.47%, #7E1F7D 18.59%, #48005F 30.83%, #320051 41.53%, #2B0346 61.92%, #270240 88.21%)
+  
+    &_2
+      z-index: 2
+    
+    &_3
+      z-index: 3
+      background: linear-gradient(176.83deg, #290733 37.67%, #20002F 89.55%)
+      opacity: 0.05
+
+  &__container
+    width: 1090px
+    padding-left: 40px
+    padding-right: 40px
+
+  &__content
+    position: absolute
+    overflow-x: auto
+    overflow-y: scroll
+    top: 0
+    bottom: 0 
+    right: 0
+    left: 0
+    z-index: 4
+
+  &__top
+    margin-top: 26px
+
+  &__bottom
+    margin-top: 60px
+    margin-bottom: 60px
+
+  &__ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__li
+    &:not(:last-child)
+      margin-bottom: 30px
+
+  &__link
+    text-decoration: none
+    font-family: Archive
+    font-size: 18px
+    line-height: 22px
+    color: rgba(255,239,246,.64)
+    padding: 0
+    position: relative
+    transition: all .3s
+
+    &:hover
+      color: #FFBCEF
+
+      &:after
+        opacity: 1
+        left: -19px
+
+    &:after
+      content: url(https://cdn.mentalmarket.io/ico/main/menu-arrow.svg)
+      position: absolute
+      opacity: 0
+      top: -2px
+      left: -23px
+      transition: all .3s
+
+  &__controls
+    margin-left: auto
+
+  &__buy
+    &:hover
+      color: #320452
+
+.stars
+  position: absolute
+  top: -25%
+  left: -25%
+  height: 150%
+  width: 150%  
+  background-image: url(https://cdn.mentalmarket.io/ico/main/stars.png)
+  background-repeat: repeat
+  background-position: top left
+
+.close
+  color: #fff
+  padding: 5px
+  margin-left: -29px
+  font-size: 21px
+  line-height: 21px
+
+.documents
+  margin-left: 8px
+  margin-top: 12px
+
+.languages
+  margin-top: 12px
+
+  &__current
+    display: flex
+
+  &__flag
+    width: 21px
+    height: 21px
+    margin-right: 5px
+
+  &__ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+  &__btn
+    text-decoration: none
+    color: rgba(255,239,246,.56)
+    font-size: 14px
+    line-height: 12px
+    white-space: nowrap
+    display: flex
+    align-items: center
+    padding: 0 32px 0 22px
+    background: transparent
+    height: 25px
+    box-sizing: border-box
+    text-transform: uppercase
+    transition: all .3s
+
+    &:hover
+      color: #FFEFF6
+      background: rgba(255,255,255,.09)
+
+.buy
+  overflow: hidden
+  max-width: 0
+  opacity: 0
+  margin-left: auto
+  margin-right: 14px
+  transition: opacity 0.2s, max-width .2s .2s
+
+  &__btn
+    &:hover
+      color: #320452
+
+.center
+  display: flex
+  align-items: center
+  position: absolute
+  left: 50%
+  transform: translate(-50%, 0)
+  opacity: 0
+  max-width: 0
+  overflow: hidden
+  transition: opacity 0.2s, max-width .2s .2s
+
+  &__logo
+    margin-left: 18px
+    margin-right: 18px
+    
+  &__link
+    text-transform: uppercase
+    color: #E5D8FF
+    font-size: 14px
+    line-height: 20px
+    text-decoration: none
+
+@media screen and (max-width: 920px)
+  .buy
+    display: none
+
+  .languages
+    margin-left: auto
+
+@media screen and (max-width: 600px)
+  .center
+    &__link
+      display: none
+
+@media screen and (max-width: 420px)   
+  .documents
+    display: none   

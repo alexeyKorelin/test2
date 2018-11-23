@@ -1,0 +1,33 @@
+@import 'styles/config.sass'
+
+.root
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+
+  &_archived
+    .coin
+      background: $color--text-gray
+
+.title
+  font-size: 10px
+  line-height: 12px
+  color: $color--text-gray
+  margin-right: 5px
+
+.coin
+  width: 14px
+  height: 14px
+  border-radius: 50%
+  display: inline-block
+  text-align: center
+  line-height: 14px
+  background: $color--text-gray
+  color: #fff
+
+  &:not(:last-child)
+    margin-right: 2px
+
+.currency
+  display: block    

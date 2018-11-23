@@ -1,0 +1,242 @@
+@import 'styles/config.sass'
+
+.root
+  text-align: center
+  transition: all 0.3s
+
+.link
+  display: inline-block
+  text-decoration: underline
+  color: $color--text-gray
+  background: transparent
+  font-size: 12px
+  line-height: 14px
+  border: none
+  border-radius: 0
+  padding: 0
+
+  &.white
+    color: #ffffff
+    background: transparent
+
+.primary
+  border-radius: $border-radius--main
+
+.circled
+  border-radius: 100px
+
+.primary, .circled
+  font-family: $font--istok_web
+  box-sizing: border-box
+  background: $color--main
+  color: #fff
+  border: 2px solid $color--main
+  line-height: 18px
+  font-size: 16px
+  font-weight: bold
+  padding: 15px 27px 13px
+  cursor: pointer
+  text-decoration: none
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: inline-block
+  height: 50px
+
+  &:disabled
+    background-color: $color--text-white
+    background-image: none
+    color: #E1E8EE
+    border-color: #E1E8EE
+    cursor: not-allowed
+
+    &:hover
+      border-color: #E1E8EE
+      background-color: #fff
+      color: #E1E8EE
+
+  &:hover
+    background-color: $color--text-white
+    color: $color--main
+
+  &.purple
+    border: none
+
+.landingPrimary
+  box-sizing: border-box
+  background: $color--main
+  color: #fff
+  border: 2px solid $color--main
+  border-radius: 4px
+  line-height: 16px
+  font-size: 14px
+  font-weight: bold
+  padding: 14px 16px 16px
+  cursor: pointer
+  text-decoration: none
+  letter-spacing: 0.03em
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: inline-block
+
+  &:disabled
+    background-color: $color--text-white
+    color: #E1E8EE
+    padding-top: 12px
+    border: 1px solid #E1E8EE
+    cursor: default
+
+  &:hover
+    background-color: $color--text-white
+    color: $color--main
+
+.icoCircled
+  font-family: $font--istok_web
+  box-sizing: border-box
+  background: #fff
+  color: #8016FF
+  border: 2px solid #fff
+  line-height: 18px
+  font-size: 14px
+  font-weight: bold
+  padding: 15px 27px 13px
+  cursor: pointer
+  text-decoration: none
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  display: inline-block
+  border-radius: 25px
+  height: 50px
+
+  &:disabled
+    background-color: $color--text-white
+    background-image: none
+    color: #E1E8EE
+    border-color: #E1E8EE
+    cursor: not-allowed
+
+    &:hover
+      border-color: #E1E8EE
+      background-color: #fff
+      color: #E1E8EE
+
+  &:hover
+    background-color: transparent
+    color: #fff
+
+.disabled
+  background: rgb(217, 121, 146)
+  pointer-events: none
+  cursor: default
+
+.block
+  display: block
+  width: 100%
+
+/* Colors */
+.transparent
+  background-color: transparent
+  color: $color--main
+
+  &:hover
+    background-color: $color--main
+    color: $color--text-white
+
+.landingTransparent
+  background-color: transparent
+  color: #7200FF
+
+  &:hover
+    background-color: $color--main
+    color: $color--text-white
+
+.landingWhite
+  background-color: #fff
+  color: #7200FF
+  border-color: #fff
+
+  &:hover
+    background-color: transparent
+    color: #fff
+
+.purple
+  background: linear-gradient(-22deg, #A95CFF, #7C10FF)
+
+  &:hover
+    color: #fff
+
+.gradient
+  background-image: $gradient--main
+  color: $color--text-white
+  border: 2px solid transparent
+  border-left: 2px solid #7C10FF
+  border-right: 2px solid #A95CFF
+  transition: background 0.3s, color 0.3s
+
+  &:hover
+    background-image: none
+    border: 2px solid $color--main
+
+.reverseGradient
+  background-color: transparent
+  background-image: none
+  color: $color--main
+  transition: background 0.3s, color 0.3s
+
+  &:hover
+    color: $color--text-white
+    background: $gradient--main
+    border: 0
+    padding: 17px 29px 15px
+
+.white
+  background: #fff
+  color: $color--text-purple
+  border-color: #fff
+
+  &:hover
+    color: #fff
+    background: transparent
+
+.icoWhiteTransparent
+  color: #fff
+  background: transparent
+  border-color: #fff
+
+  &:hover
+    background: #fff
+    color: #8016FF
+
+.icoWhiteAlways
+  color: #8016FF
+  background: #fff
+  border-color: #fff
+
+  &:hover
+    background: #fff
+    color: #8016FF
+
+.icoGradient
+  color: #fff
+  border: none
+  background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 174.05%) 
+  padding: 17px 29px 15px
+
+  &:hover
+    background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 174.05%) 
+    color: #fff     
+
+.icoPinkReverse
+  color: #FFBCEF
+  border-color: #e066d5
+  background: transparent 
+  transition: background .3s, color .3s
+
+  &:hover
+    background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 174.05%) 
+    color: #fff 
+    border: none
+    padding: 17px 29px 15px
+    transition: background .3s, color .3s

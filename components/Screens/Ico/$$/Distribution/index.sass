@@ -1,0 +1,81 @@
+@import 'styles/config.sass'
+
+.root
+
+.course
+  color: #CCABEA
+  font-size: 18px
+  line-height: 28px
+  text-align: center
+
+.caps
+  display: flex
+  justify-content: center
+  margin-top: 25px
+
+  &__cap
+    &:not(:last-child)
+      margin-right: 50px
+
+  &__icon
+    margin-left: 5px
+
+.itemsContainer
+  margin-top: 60px
+  display: flex
+  justify-content: center
+  overflow: hidden
+  width: 100%
+
+.items
+  transition: all .5s
+
+  &__inner
+    display: flex
+    flex-wrap: nowrap
+
+.card
+  margin-bottom: 10px
+
+.col
+  box-sizing: border-box
+  padding-left: 10px
+  padding-right: 10px
+  width: 292px
+  flex-shrink: 0
+  opacity: 1
+  transition: .5s
+
+  &_invisible
+    opacity: .2
+
+.arrows
+  display: flex
+  justify-content: flex-end
+  position: relative
+  margin-top: 30px
+
+.arrow
+  width: 42px
+  height: 42px
+  padding: 0
+  background-repeat: no-repeat
+  background-size: 100% 100%
+  background-position: center center
+  opacity: 1
+  transition: all .3s
+
+  &:disabled
+    opacity: 0
+    cursor: default
+
+  &:not(:last-child)
+    margin-right: 18px
+
+  &_left
+    background-image: url(https://cdn.mentalmarket.io/ico/roadmap/arrow-left.svg)
+
+  &_right
+    background-image: url(https://cdn.mentalmarket.io/ico/roadmap/arrow-right.svg)  
+
+  

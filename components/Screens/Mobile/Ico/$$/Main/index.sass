@@ -1,0 +1,162 @@
+@import 'styles/config.sass'
+
+.root
+  padding-top: 130px
+  box-sizing: border-box
+  min-height: 780px
+  position: relative
+  z-index: 1
+  
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/main/line-sm.png)
+    position: absolute    
+    left: 50%
+    bottom: -29px
+    transform: translate(-50%,0)
+
+  &__undercover
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+
+  &__inner
+    position: absolute
+    left: 0
+    right: 0
+    background-repeat: no-repeat
+    height: 100%
+    width: 100%
+
+    &_1
+      height: 54%
+      overflow: hidden
+
+    &_2
+      background-image: url(https://cdn.mentalmarket.io/ico/main/hill-1.svg)    
+      background-size: 2500px 260px
+      background-position: center 312px
+      z-index: 4
+
+      @media screen and (min-width: 1900px) 
+        background-size: 100% 260px
+
+    &_3
+      z-index: 5
+
+    &_4
+      background-image: url(https://cdn.mentalmarket.io/ico/main/hill-2.svg)    
+      background-size: 2500px 260px
+      background-position: center 388px
+      z-index: 6
+
+      @media screen and (min-width: 1900px) 
+        background-size: 100% 260px
+
+    &_5
+      background-image: url(https://cdn.mentalmarket.io/ico/main/hill-3.svg)    
+      background-size: 2700px 260px
+      background-position: center 543px
+      z-index: 7
+
+      @media screen and (min-width: 1900px) 
+        background-size: 170% 260px
+
+    &_6
+      background-image: url(https://cdn.mentalmarket.io/ico/main/hill-4.svg)    
+      background-size: 2700px 260px
+      background-position: center 520px
+      z-index: 8 
+
+      @media screen and (min-width: 1900px) 
+        background-size: 170% 260px
+
+    &_7
+      z-index: 9
+      background: url(https://cdn.mentalmarket.io/ico/currencies/usd-sm.png) 17% 10% no-repeat, url(https://cdn.mentalmarket.io/ico/currencies/eur-sm.png) 10% 46% no-repeat, url(https://cdn.mentalmarket.io/ico/currencies/rub-sm.png) -2% 33% no-repeat, url(https://cdn.mentalmarket.io/ico/currencies/btc-sm.png) 92% 17% no-repeat, url(https://cdn.mentalmarket.io/ico/currencies/eth-sm.png) 97% 31% no-repeat, url(https://cdn.mentalmarket.io/ico/currencies/bch-sm.png) 88% 49% no-repeat
+
+.pyramid
+  position: absolute
+  user-select: none
+  top: 300px
+  left: 50%
+  transform: translate(-78px,0)
+
+.gradient
+  background: linear-gradient(9.54deg, #2F024D 12.55%, #3B0657 19.07%, #5F176A 25.89%, #82287C 28.59%, #B84592 31.67%, #ED61A8 34.82%, #B74492 38.2%, #7E1F7D 42.16%, #48005F 50.09%, #320051 57.01%, #2B0346 70.21%, #270240 87.23%)
+  position: absolute
+  top: -50%
+  left: -50%
+  height: 200%
+  width: 200%
+
+.sky
+  position: absolute
+  top: -25%
+  left: -25%
+  width: 150%
+  height: 150%
+
+  &__inner
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-image: url(https://cdn.mentalmarket.io/ico/main/stars.png)
+    background-repeat: repeat
+    background-position: top left
+    z-index: 2
+
+.content
+  text-align: center
+
+  &__buy
+    color: #c148d7
+
+  &__controls
+    margin-top: 30px
+    text-align: center
+
+  &__control
+    &_a
+      color: #fff
+      font-size: 14px
+      line-height: 18px
+      text-decoration: underline
+      display: inline-block
+      margin-top: 24px
+
+.description
+  color: #FFEFF6
+  font-size: 16px
+  line-height: 24px
+  margin-top: 40px
+
+.links
+  &__link
+    text-transform: uppercase
+    color: #E5D8FF
+    font-size: 14px
+    line-height: 20px
+    text-decoration: none
+
+    &:not(:last-child)
+      margin-right: 20px
+
+.bigLogo
+  width: 228px
+  margin-top: 42px
+
+.saleIndicator
+  margin-top: 50px
+  margin-left: auto
+  margin-right: auto
+
+  &:after
+    content: url(https://cdn.mentalmarket.io/ico/currencies/eth.png)
+    position: absolute
+    bottom: -1px
+    right: -21px

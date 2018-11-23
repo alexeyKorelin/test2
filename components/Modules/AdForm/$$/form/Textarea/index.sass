@@ -1,0 +1,27 @@
+@import 'styles/config.sass'
+@import 'components/Base/Form/Textarea/index.sass'
+
+.root
+  &_error
+    .description
+      color: $color--text-gray
+    .count
+      color: $color--text-gray
+
+.description
+  font-weight: bold
+  margin-left: 4px
+  color: $color--text-gray
+
+.textarea
+  font-size: 18px
+  padding: 13px 19px 14px
+  border-radius: 4px
+  text-align: left
+
+  &:focus
+    border-color: rgba(88, 0, 255, 0.1011)
+    box-shadow: 0 0 5px rgba(88, 0, 255, 0.2019)
+
+  &::placeholder
+    color: $color--text-gray  

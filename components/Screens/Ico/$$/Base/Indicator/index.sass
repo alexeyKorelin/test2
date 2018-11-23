@@ -1,0 +1,26 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  &__inner
+    height: 100%
+
+  &_default
+    height: 12px
+    border-radius: 6px
+    background: #a52ed4
+
+    #{$root}__inner      
+      background: linear-gradient(90deg, #9260bb 0%, #F37DCB 100%)
+      border-radius: 6px
+
+  &_big
+    height: 14px
+    border-radius: 10px
+    background: #a52ed4
+
+    #{$root}__inner    
+      background: linear-gradient(90deg, #8D00FF 35.06%, #F37DCB 92.28%)
+      opacity: .55
+      border-radius: 10px

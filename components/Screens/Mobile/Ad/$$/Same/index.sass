@@ -1,0 +1,50 @@
+@import 'styles/config.sass'
+
+.adsList
+  display: inline-flex
+
+.title
+  font-size: 30px
+  line-height: 35px
+  margin-bottom: 10px
+
+.adBage
+  width: 140px
+
+  &:not(:last-child)
+    margin-right: 10px
+
+.scrollbarContainer
+  height: 11px !important
+  background: rgba(210, 204, 255, 0.19) !important
+  border-radius: 9px
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+
+.scrollbar
+  height: 11px !important
+  background: rgba(238, 228, 255, 0.74) !important
+  border-radius: 9px
+  margin-top: 0 !important
+
+.scrollArea
+  margin-left: -10px
+  margin-right: -10px
+
+.row
+  flex-wrap: nowrap
+  padding: 10px 17px 23px
+
+.col
+  display: flex
+  box-sizing: border-box
+  padding-left: 3px
+  padding-right: 3px
+
+@media screen and (min-width: 600px)
+  .adBage
+    width: 175px
+    &:not(:last-child)
+      margin-right: 15px

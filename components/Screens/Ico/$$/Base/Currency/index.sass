@@ -1,0 +1,12 @@
+@import 'styles/config.sass'
+
+.root
+  user-select: none
+  animation: soar 2.5s ease-in-out infinite
+
+@keyframes soar
+  0%, 100%
+    transform: translateY(0)
+
+  50%
+    transform: translateY(-7px)

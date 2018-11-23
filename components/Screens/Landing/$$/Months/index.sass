@@ -1,0 +1,77 @@
+@import 'styles/config.sass'
+
+.h2
+  color: $color--text
+  font-size: 36px
+  line-height: 42px
+  text-align: center
+  letter-spacing: 0.05em
+  margin-bottom: 16px
+
+.subheader
+  font-size: 18px
+  line-height: 28px
+  color: $color--text-gray
+  margin-top: 23px
+  text-align: center
+
+.wave   
+  display: flex
+  justify-content: center    
+  padding-top: 74px
+  padding-bottom: 225px
+
+.months
+  position: relative
+
+.month
+  position: absolute
+
+  &_active
+    box-shadow: 0px 1px 10px rgba(210, 204, 255, 0.3)
+    padding: 17px 25px 35px
+    background: #fff
+
+    .title
+      color: #823FFF
+
+    .description
+      color: #4A4A4A  
+      
+
+.title
+  color: #4A4A4A
+  font-size: 18px
+  line-height: 21px
+  font-weight: bold
+
+.description  
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 14px
+  margin-top: 11px
+
+.p
+  text-align: center
+  p
+    font-weight: bold
+
+.bush5, .bush6
+  position: absolute
+  z-index: 3
+
+.bush5   
+  display: none 
+
+  @media screen and (min-width: 1550px)
+    display: block
+    left: -72px
+    top: -316px
+
+  @media screen and (min-width: 1850px)
+    top: -292px
+    left: 5px
+
+.bush6
+  right: -24px
+  top: -305px    

@@ -1,0 +1,126 @@
+@import 'styles/config.sass'
+
+
+.root
+  padding-top: 20px !important
+  padding-bottom: 20px !important
+  text-align: center
+  margin-bottom: 40px
+
+.cardContainer
+  width: 370px
+  height: 256px
+  border-radius: 8px
+  padding: 0 10px
+  font-family: $font--roboto
+
+  &:hover
+    cursor: pointer
+
+  &__inner
+    position: relative  
+    border-radius: $border-radius--main
+    box-shadow: 0 2px 4px rgba(183, 155, 218, 0)
+    box-sizing: border-box
+    transition: all 0.3s
+
+    &:hover
+      background: #fff
+      box-shadow: 0 2px 4px rgba(183, 155, 218, .19)
+
+      .category__bage
+        background-color: #fff
+        border-color: #fff
+
+      .cardImageHover
+        opacity: 1
+
+.cardImageHover
+  opacity: 0
+  position: absolute
+  box-sizing: border-box
+  border-radius: $border-radius--main
+  height: 200px
+  transition: all 0.3s
+  opacity: 0
+  left: 0
+  right: 0
+  background: linear-gradient(18deg, rgba(124, 16, 255, .8), rgba(169, 92, 255, .8))
+  display: flex
+  justify-content: flex-end
+  flex-direction: column
+  padding: 18px 10px
+  color: #fff
+
+.cardImagePrice
+  font-size: 36px
+  padding-bottom: 20px
+  font-weight: bold
+  text-align: left
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+.cardTitle
+  font-size: 18px
+  font-weight: bold
+  text-align: left
+  padding: 10px
+  margin: 0
+  display: flex
+  min-height: 36px
+  align-items: center
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  transition: all 0.3s
+
+.cardImageDescription
+  font-size: 14px
+  line-height: 19px
+  text-align: left    
+  overflow: hidden
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  max-height: 57px
+
+.cardImageContainer
+  width: 100%
+  height: 200px
+  position: relative
+  background-size: 100%
+  overflow: hidden
+  background-position: center center
+  border-radius: 8px
+
+.cards
+  display: inline-flex
+  padding-bottom: 13px
+
+.scrollbarContainer
+  height: 11px !important
+  background: rgba(210, 204, 255, 0.19) !important
+  border-radius: 9px
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+
+.scrollbar
+  height: 11px !important
+  border-radius: 9px
+  margin-top: 0 !important
+  background: linear-gradient(0.04deg, rgba(124, 16, 255, 0.18) 99.16%, rgba(169, 92, 255, 0.18) 768.37%) !important
+  opacity: 0.98
+
+.category
+  position: absolute
+  top: 10px
+  left: 10px
+  z-index: 1
+
+  &__bage
+    color: #fff
+    transition: all 0.3s

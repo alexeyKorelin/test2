@@ -1,0 +1,141 @@
+@import 'styles/config.sass'
+
+.root
+  $root: &
+
+  position: relative
+
+  &_opened
+    .label
+      color: #fff
+
+    .toggler
+      border-radius: 4px 4px 0 0
+
+  &_whiteIcon
+    &#{$root}_caretDown
+      &:after
+        border-top: 4px solid #fff
+
+  &_caretDown
+    &:after
+      content: ''
+      display: block
+      width: 0
+      height: 0
+      border-top: 4px solid $color--text-purple
+      border-right: 3px solid transparent
+      border-bottom: 0
+      border-left: 3px solid transparent
+      top: calc(50% - 1px)
+      right: 5px
+      position: absolute
+      transition: all 0.3s
+
+    &#{$root}_opened
+      &:after
+        border-top: 4px solid #fff
+
+  //colors
+  &_light
+    .toggler
+      padding: 5px 10px 5px 9px
+
+      i
+        color: #fff
+
+    .dropdown
+      background: #fff
+
+      a, button
+        color: #7B2CFF
+
+        &:hover
+          background-color: rgba(128, 22, 255, 0.15)
+
+    &#{$root}_opened
+      .toggler
+        background-color: #fff
+
+        i
+          color: $color--text-purple
+
+  &_dark
+    .toggler
+      padding: 5px 14px 5px 5px
+
+      i
+        color: $color--text-purple
+
+    .dropdown
+      background-image: linear-gradient(-280deg, #7C10FF 0%, #A95CFF 100%)
+
+      a, button
+        color: #fff
+
+        &:hover
+          background-color: #8016FF
+
+    &#{$root}_opened
+      .toggler
+        background-color: #A95CFF
+
+        i
+          color: #fff
+
+    &#{$root}_whiteIcon
+      i
+        color: #fff
+
+    &#{$root}_caretDown
+      &#{$root}_opened
+        &:after
+          border-top: 4px solid #fff
+
+.icon
+  line-height: 14px
+
+.label
+  font-size: 12px
+  font-weight: bold
+  color: black
+  padding-top: 3px
+  padding-right: 6px
+
+.toggler
+  cursor: pointer
+  position: relative
+  display: flex
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1)
+
+  &:disabled
+    cursor: default
+
+.dropdown
+  min-width: 100%
+  text-align: left
+  position: absolute
+  right: 0
+  box-shadow: 0 1px 7px 0 rgba(183,155,218,0.19)
+  border-radius: 4px 0 4px 4px
+  z-index: 4
+
+  a, button
+    padding: 5px 10px
+    cursor: pointer
+    display: block
+    font-family: $font--istok_web
+    font-size: 11px
+    font-weight: bold
+    text-decoration: none
+    width: 100%
+    text-align: left
+    box-sizing: border-box
+    white-space: nowrap
+
+    &:hover
+      &:first-child
+        border-radius: 4px 0 0 0
+
+      &:last-child
+        border-radius: 4px 0 4px 4px

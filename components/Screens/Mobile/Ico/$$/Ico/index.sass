@@ -1,0 +1,114 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+
+.description
+  text-align: center
+  font-size: 16px
+  line-height: 24px
+  color: #FFEFF6
+
+.pagination
+  margin-top: 30px
+  text-align: center
+
+.page
+  $root: &
+
+  display: inline-flex
+  width: 36px
+  height: 36px
+  border-radius: 50%
+  position: relative
+
+  &_active
+    #{$root}__inner
+      &_1
+        opacity: 0
+
+      &_2
+        opacity: 0
+
+      &_3
+        opacity: .345
+
+  &__img
+    max-height: 16px
+    max-width: 16px
+
+  &:not(:last-child)
+    margin-right: 6px
+
+  &__inner
+    position: absolute
+    border-radius: 50%
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+    &_1
+      width: 44px
+      height: 44px
+      background: linear-gradient(0deg, #8D00FF -56.09%, #F37DCB 139.56%)
+      opacity: 0.39
+      filter: blur(13.9448px)
+      z-index: 1
+      transition: all .3s
+
+    &_2
+      width: 36px
+      height: 36px
+      background: linear-gradient(0deg, #8D00FF -56.09%, #F37DCB 139.56%)
+      opacity: 0.59
+      z-index: 2
+      transition: all .3s
+
+    &_3
+      width: 28px
+      height: 28px
+      background: linear-gradient(0deg, #8D00FF -94.59%, #F37DCB 101.05%)
+      z-index: 3
+
+    &_4
+      width: 28px
+      height: 28px
+      z-index: 4
+      display: flex
+      align-items: center
+      justify-content: center
+
+.items
+  margin-top: 20px
+
+.image
+  min-height: 62px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &__img
+    display: inline-block !important
+
+.item
+  text-align: center
+  padding-left: 15px
+  padding-right: 15px
+  box-sizing: border-box
+
+  &__image
+    text-align: center
+
+  &__title
+    font-weight: bold
+    font-size: 16px
+    line-height: 18px
+    color: #FFEFF6
+  
+  &__description
+    font-size: 14px
+    line-height: 20px    
+    color: #E5D8FF
+    margin-top: 8px
+   
+  

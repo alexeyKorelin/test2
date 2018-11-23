@@ -1,0 +1,55 @@
+@import 'styles/config.sass'
+
+.root
+  min-height: 870px
+  background: url(https://cdn.mentalmarket.io/landing/noise.png) center / 30px 30px, url(https://cdn.mentalmarket.io/landing/spot-1.svg) center top / 1900px 825px  no-repeat
+  
+  @media screen and (min-width: 1901px)
+    background: url(https://cdn.mentalmarket.io/landing/noise.png) center / 30px 30px, url(https://cdn.mentalmarket.io/landing/spot-1.svg) center top / 100% 825px no-repeat
+
+.content
+  position: relative
+
+.info
+  margin-top: 169px
+
+.screens
+  position: absolute    
+  right: -141px
+  top: 79px
+  z-index: 1
+  user-select: none
+
+.man
+  position: absolute  
+  z-index: 2
+  right: -6px
+  top: 140px
+  user-select: none
+
+.bush1
+  position: absolute
+  user-select: none
+  left: -177px
+  top: 330px
+  z-index: 2
+
+.bush2
+  position: absolute
+  user-select: none
+  right: -130px
+  top: 344px 
+  z-index: 2
+
+@for $i from 1 through 6  
+  @media screen and (max-width: 1830 - $i*100px) 
+    .bush1
+      left: -177px - $i*50px
+
+    .bush2
+      right: -130px - $i*50px      
+
+@media screen and (max-width: 1200px)
+  .bush1
+    left: -407px
+       

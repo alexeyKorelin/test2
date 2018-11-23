@@ -1,0 +1,111 @@
+@import 'styles/config.sass'
+
+.root
+  position: relative
+  display: inline-block
+
+  &_open
+    .toggler
+      opacity: 0
+      transition: all .3s
+
+  &_default
+    .dropdown
+      top: -1px
+      padding-top: 30px
+      background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+      padding-bottom: 4px
+
+    .toggler, .label
+      font-size: 12px
+
+    .label
+      top: 0
+
+    .toggler
+      color: #AE28EE
+      background: transparent
+      border: 1px solid #AE28EE
+
+      &:after   
+        border-top: 3px solid #AE28EE
+
+  &_dark
+    .dropdown
+      top: -13px
+      padding-top: 43px
+      background: linear-gradient(180deg, #1C0031 -87.28%, #9D14F6 238.43%)
+      padding-bottom: 17px
+
+    .toggler, .label
+      font-size: 14px
+
+    .label
+      top: 12px
+
+    .toggler
+      color: #E5D8FF
+      background: transparent
+      border: 1px solid transparent
+
+      &:after   
+        border-top: 3px solid #E5D8FF
+
+  &_left
+    .dropdown
+      right: -1px
+
+    .label
+      right: 0
+
+  &_right
+    .dropdown
+      left: -1px
+
+    .label
+      left: 0
+
+.toggler, .label
+  border-radius: 15px
+  box-sizing: border-box
+  line-height: 24px
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    width: 0
+    height: 0
+    border-right: 3px solid transparent
+    border-bottom: 0
+    border-left: 3px solid transparent
+    position: absolute
+
+.toggler
+  padding: 1px 30px 1px 20px
+  opacity: 1
+  transition: all .0s
+
+  &:after
+    top: 11px
+    right: 20px
+
+.label
+  padding: 3px 32px 3px 22px
+  border-color: transparent
+  color: #FFBCEF
+  position: absolute
+
+  &:after
+    top: 13px
+    right: 22px
+    border-top: 3px solid #FFBCEF  
+    transform: rotate(180deg)
+
+.dropdown
+  position: absolute  
+  border-radius: 15px
+  overflow: hidden
+  z-index: 1
+
+  

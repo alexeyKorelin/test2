@@ -1,0 +1,64 @@
+@import 'styles/config.sass'
+
+.root
+  box-shadow: $box-shadow
+  border-radius: $border-radius
+  background: #fff
+  text-align: center
+  padding: 33px
+
+  &_inactive
+    .name
+      color: $color--text-gray
+
+    .date
+      color: $color--text-gray
+
+    .telegram
+      color: $color--text-gray
+
+    .description
+      color: $color--text-gray
+
+.top 
+  font-size: 12px
+  margin-bottom: 17px
+
+  &:after
+    display: block
+    content: ''
+    clear: both
+
+.imageContainer
+  width: 70px
+  height: 70px
+  border-radius: 50%
+  overflow: hidden  
+  background: $color--text-gray
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 13px
+
+.image  
+  max-width: 100%
+  max-height: 100%
+  border-radius: 50%
+
+.name
+  color: $color--text
+  font-weight: bold
+  font-size: 18px
+  margin-bottom: 13px
+
+.date
+  color: $color--text-blue
+  font-size: 12px
+  margin-bottom: 17px
+
+.description
+  color: $color--text
+  font-size: 12px
+  line-height: 14px
+
+.button  
+  margin-top: 32px

@@ -1,0 +1,92 @@
+@import "styles/config.sass"
+
+.header
+  padding-top: 20px
+  padding-bottom: 10px
+
+.root
+  width: 20px
+  height: 24px
+  display: block
+  border: none
+  background: transparent
+  padding: 0
+  outline: none
+  -webkit-appearance: none
+  color: #fff    
+  margin-left: 11px
+  margin-top: 2px
+
+.menuSidebar
+  background-image: $gradient--main
+
+  i
+    color: #fff
+    padding: 2px
+  nav
+    list-style-type: none
+    display: flex
+    flex-direction: column
+    margin-top: 80px
+    width: 100%
+  li
+    font-size: 30px
+    line-height: 46px
+    letter-spacing: 0.5px
+    color: #fff
+    margin: 0
+    text-align: left
+
+    &:not(:last-child)
+      margin-bottom: 30px
+
+    a
+      color: #fff
+      text-decoration: none
+
+  &Inner
+    padding: 0px 20px 0px 20px
+    display: flex
+    height: 100%
+
+.close
+  position: absolute
+  left: 19px
+  top: 20px
+  width: 24px
+  height: 28px
+  display: flex
+  justify-content: center
+  align-items: center
+  border: none
+  background: transparent
+  padding: 0
+
+.go_area
+  display: flex
+  padding: 20px 0
+  align-items: center
+  justify-content: center
+.go
+  border-color: #fff
+  color: #fff
+  padding: 20px 0
+  font-size: 16px
+
+.languageBlock
+  display: flex
+  align-items: center
+  justify-content: center
+
+.langButton
+  display: flex
+  padding: 0 4px
+  opacity: .5
+  color: white
+  font-family: $font--istok_web
+  font-size: 18px
+  &Active
+    opacity: 1
+
+.animatedClose
+  margin-left: 10px

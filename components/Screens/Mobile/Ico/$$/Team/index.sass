@@ -1,0 +1,219 @@
+@import 'styles/config.sass'
+
+.item
+  box-sizing: border-box
+  padding-left: 15px
+  text-align: center
+  transition: opacity .5s
+
+  &_invisible
+    opacity: .2
+
+  &__inner
+    background: linear-gradient(71.45deg, #7C10FF 1.17%, #A95CFF 96.49%)
+    border-radius: 10px
+    padding: 30px 10px 10px
+    min-height: 310px
+    box-sizing: border-box
+
+  &__image
+    width: 142px
+    display: inline-block !important
+
+  &__title
+    font-size: 24px
+    line-height: 35px
+    color: #fff
+    font-weight: bold
+    margin-top: 5px
+
+  &__role
+    color: #DAB1FF
+    font-size: 16px
+    line-height: 23px
+
+  &__link
+    display: inline-block
+    margin-top: 18px
+    padding: 5px
+
+  &__join
+    font-weight: bold
+    color: #fff
+    font-size: 14px
+    line-height: 20px
+    padding: 5px
+    border: none
+    background: transparent
+    margin-top: 18px
+
+.root [class~='slick-dots']
+  list-style: none
+  margin: 9px 0 0
+  padding: 0
+  text-align: center
+
+  li
+    width: 11px
+    height: 11px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+
+    &:not(:last-child)
+      margin-right: 1px
+
+.page
+  width: 7px 
+  height: 7px
+  box-sizing: border-box
+  border-radius: 50%
+  border: 1px solid #b02bee
+  padding: 0
+  display: block
+  position: relative
+  z-index: 1
+  overflow: hidden
+  transition: all .3s
+
+  &:after
+    content: ''
+    z-index: -1
+    background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 174.05%)
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    transition: all .3s
+
+.root [class~='slick-active']
+  .page
+    width: 11px
+    height: 11px
+    border: 1px solid transparent
+
+    &:after
+      opacity: 1
+
+.popup
+  position: relative
+  padding-bottom: 30px
+
+  &__header
+    color: #FFBCEF
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+
+  &__description
+    color: #fff
+    font-size: 14px
+    line-height: 22px
+    margin-top: 38px
+
+  &__mail
+    color: #FFBCEF
+    font-weight: bold
+    font-size: 14px
+    line-height: 20px
+    margin-top: 27px
+    text-decoration: none
+    display: inline-block
+
+  &__copy
+    position: absolute
+    bottom: -25px
+    left: 50%
+    transform: translate(-50%,0)
+
+.advisors
+  margin-top: 30px
+
+  &__title
+    font-family: Archive
+    color: #FFBCEF
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    text-align: center    
+    margin-top: 0
+    margin-bottom: 15px
+
+  &__items
+    display: flex
+    justify-content: center
+
+  &__controls
+    text-align: center
+    margin-top: 30px
+
+.advisor
+  $root: &
+
+  &:not(:last-child)
+    margin-right: 40px
+
+  &__img
+    border-radius: 50%
+    width: 100px
+    height: 100px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    position: relative
+    margin-left: auto
+    margin-right: auto
+
+    &:hover
+      #{$root}
+        &__blur
+          opacity: 0.33
+
+        &__cover
+          opacity: 0.81
+
+  &__blur
+    width: 120px
+    height: 120px
+    position: absolute
+    z-index: 1
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background: linear-gradient(0deg, #8D00FF 7.94%, #F37DCB 109.67%)
+    filter: blur(27.1828px)
+    border-radius: 50%
+    opacity: 0
+    transition: all .3s
+
+  &__cover
+    z-index: 2
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(180deg, #8D00FF 6.98%, #F37DCB 325.87%)
+    border-radius: 50%
+    opacity: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: all .3s
+
+  &__join
+    color: #fff
+    font-weight: bold
+    font-size: 10px
+    line-height: 20px
+
+  &__title
+    font-weight: bold
+    font-size: 18px
+    line-height: 26px
+    color: #fff
+    margin-top: 20px    
+      

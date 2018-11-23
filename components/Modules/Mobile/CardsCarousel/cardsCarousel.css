@@ -1,0 +1,32 @@
+.cardsCarousel .slick-track 
+{
+  margin: unset;
+}
+.cardsCarousel .slick-dots 
+{
+  margin-top: 1px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  height: 10px;
+}
+.cardsCarousel .slick-dots li 
+{
+  display: inline-flex; 
+  vertical-align: top; 
+  width: 10px;
+  height: 10px;
+  justify-content: center;
+  align-items: center
+}
+.cardsCarousel .slick-dots li:not(:last-child) 
+{
+  margin-right: 5px;
+}
+.cardsCarousel .slick-active .page
+{
+  width: 10px;
+  height: 10px;
+  background: #5800FF;
+}

@@ -1,0 +1,48 @@
+@import 'styles/config.sass'
+
+.root
+  &_error
+    .select
+      border-color: $color--text-red
+
+.select
+  border: 1px solid #E1E8EE
+  border-radius: 4px
+  padding: 13px 33px 14px 19px
+  font-size: 18px
+  background-color: #fff
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill:%23343a40'></polygon></svg>")
+  background-size: 8px 5px
+  background-position: right -20px center
+  background-origin: content-box
+  background-repeat: no-repeat
+  width: 100%
+  margin-bottom: 23px
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  &.placeholder
+    color: #9b9b9b
+
+
+.info
+  margin-bottom: 5px
+
+.title
+  font-size: 12px
+  font-weight: bold
+  color: $color--text
+  line-height: 16px
+
+  &_required
+    color: $color--text-blue
+
+.description
+  color: $color--text-gray
+  font-size: 12px
+  line-height: 16px
+  font-weight: bold
+  margin-left: 4px
+
+  &_error
+    color: $color--text-red
